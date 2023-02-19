@@ -1,2 +1,2 @@
-# shubham526.github.io
+# TREC Interactive Knowledge Assistance Track
 Website for the TREC iKAT track
