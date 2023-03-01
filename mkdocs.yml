@@ -4,4 +4,36 @@ nav:
     - Home: index.md
     - Data: data.md
     - Guidelines: guidelines.md
-theme: material
+theme: 
+  name: material
+  palette:
+     # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: red
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      name: Email Us
+      link: mailto:trec.ikat.ai@gmail.com
+    - icon: fontawesome/brands/twitter
+      name: Follow us on Twitter
+      link: https://twitter.com/trec_ikat
+    - icon: fontawesome/brands/slack
+      name: Join the slack channel
+      link: https://trectalk.slack.com/archives/C04QPBXNL01
+    - icon: fontawesome/solid/user-group
+      name: Join the Google group
+      link: trec-ikat@googlegroups.com
+copyright: Copyright &copy; 2023 TREC iKAT Organizers
