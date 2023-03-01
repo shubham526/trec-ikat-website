@@ -1,0 +1,7 @@
+site_name: TREC Interactive Knowledge Assistance Track (iKAT)
+site_url: https://www.ikat.com/
+nav:
+    - Home: index.md
+    - Data: data.md
+    - Guidelines: guidelines.md
+theme: material
