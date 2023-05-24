@@ -690,7 +690,7 @@
 <h3 id="passage-segmentation"><strong>Passage Segmentation</strong></h3>
 <p>For assessment, we will judge provenance passages. We segment the documents in our collection into passages in a similar manner as done by the TREC Deep Learning track for segmenting MS MARCO documents into passages: First, each document is trimmed to 10k characters. Then a 10-sentence sliding window with a 5-sentence stride is used to generate the passages. </p>
 <p>An example document with some passage segmentation is provided in TrecWeb format below for illustration purposes:</p>
-<p><img alt="Picture depicting a conversation tree" src="../passage-segmentation.png" /></p>
+<p><img alt="Picture depicting passage segmentation for iKAT" src="../passage-segmentation.png" /></p>
 <h2 id="topic-format"><strong>Topic Format</strong></h2>
 <p>We will provide several sample topics with example baseline runs for validation and testing. Below is a sample topics file with two subtrees of the same topic. Subtrees are identified by topic and subtree ID,  i.e topic 1, subtree 2 is 1-2. Also a passage_provenance field with a list of provenance passages and ptkb_provenance field with a list of provenance statements from PTKB, that are used for generating the response, are included. An example is shown below for illustrative purposes. </p>
 <pre><code>[
@@ -711,14 +711,23 @@
       {
         &quot;turn_id&quot;: &quot;1&quot;,
         &quot;utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
-        &quot;resolved_utterance&quot;: &quot;&quot;,
+        &quot;resolved_utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
         &quot;response&quot;: &quot;Do you want to continue your bachelor studies and obtain a degree in computer science?&quot;,
         &quot;ptkb_provenance&quot;: [
           {
             &quot;id&quot;: &quot;2&quot;,
             &quot;text&quot;: &quot;I have bachelor degree of computer science from Tilburg university&quot;,
             &quot;score&quot;: 0.9
-          },
+          }
+        ],
+        &quot;passage_provenance&quot;: []
+      },
+      {
+        &quot;turn_id&quot;: &quot;2&quot;,
+        &quot;utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
+        &quot;resolved_utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
+        &quot;response&quot;: &quot;Do you want to study abroad?&quot;,
+        &quot;ptkb_provenance&quot;: [
           {
             &quot;id&quot;: &quot;5&quot;,
             &quot;text&quot;: &quot;I live in the Netherlands&quot;,
@@ -728,9 +737,9 @@
         &quot;passage_provenance&quot;: []
       },
       {
-        &quot;turn_id&quot;: &quot;2&quot;,
-        &quot;utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
-        &quot;resolved_utterance&quot;: &quot;Universities in the Netherlands offering master’s programs in computer science.&quot;,
+        &quot;turn_id&quot;: &quot;3&quot;,
+        &quot;utterance&quot;: &quot;No, I don’t want to go abroad.&quot;,
+        &quot;resolved_utterance&quot;: &quot;No, I don’t want to go abroad.&quot;,
         &quot;response&quot;: &quot;I can help you with finding a university for continuing your studies in the netherlands as a computer science student. Take a look at these Top Computer Science Universities in the Netherlands: Delft University of Technology. Eindhoven University of Technology. Vrije Universiteit Amsterdam. University of Amsterdam. Leiden University. Radboud University. Utrecht University. University of Twente&quot;,
         &quot;ptkb_provenance&quot;: [
           {
@@ -750,7 +759,7 @@
             &quot;text&quot;: &quot;...&quot;,
             &quot;score&quot;: 0.88
           }
-     ]
+        ]
       }
     ]
   },
@@ -771,7 +780,7 @@
       {
         &quot;number&quot;: &quot;1&quot;,
         &quot;utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
-        &quot;resolved_utterance&quot;: &quot;&quot;,
+        &quot;resolved_utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
         &quot;response&quot;: &quot;Sure, do you want to study computer science?&quot;,
         &quot;ptkb_provenance&quot;: [
           {
@@ -783,7 +792,7 @@
             &quot;id&quot;: &quot;8&quot;,
             &quot;text&quot;: &quot;I’m moving to Canada to study master&quot;,
             &quot;score&quot;: 0.9
-       }
+          }
         ],
         &quot;passage_provenance&quot;: [
           {
@@ -796,7 +805,7 @@
       {
         &quot;number&quot;: &quot;2&quot;,
         &quot;utterance&quot;: &quot;Yes, I want to pursue my education in computer science. Can you tell me the name of the best universities?&quot;,
-        &quot;resolved_utterance&quot;: &quot;Can you tell me the name of the best computer science universities in Canada?&quot;,
+        &quot;resolved_utterance&quot;: &quot;Yes, I want to pursue my education in computer science. Can you tell me the name of the best computer science universities in Canada?&quot;,
         &quot;response&quot;: &quot;Here are the best universities for computer science in Canada: University of British Columbia, University of Alberta, Concordia University, Simon Fraser University, The University of Toronto&quot;,
         &quot;ptkb_provenance&quot;: [
           {
@@ -806,7 +815,7 @@
           }
         ],
         &quot;passage_provenance&quot;: [
-      {
+          {
             &quot;id&quot;: &quot;clueweb22-en0026-31-15538:1&quot;,
             &quot;text&quot;: &quot;...&quot;,
             &quot;score&quot;: 0.9
@@ -827,10 +836,22 @@
             &quot;score&quot;: 0.8
           }
         ]
+      },
+      {
+        &quot;number&quot;: &quot;3&quot;,
+        &quot;utterance&quot;: &quot;Can you tell me more about the university of Totonto? &quot;,
+        &quot;resolved_utterance&quot;: &quot;Can you tell me more about the university of Totonto? &quot;,
+        &quot;response&quot;: &quot;Sure, what do you want to know about? Do you want to know about its campus, community, or programs?&quot;,
+        &quot;ptkb_provenance&quot;: [],
+        &quot;passage_provenance&quot;: []
       }
     ]
   }
 ]
+
+
+
+
 </code></pre>
 <h2 id="task-submissions"><strong>Task Submissions</strong></h2>
 <p>Participants submit the output of their system on the specified “test” topics.  A single participant may submit the output of multiple systems, up to a maximum of four runs. A sample run is provided below:</p>
