@@ -6,6 +6,7 @@ nav:
     - Guidelines: guidelines.md
 theme: 
   name: material
+  logo: logo.jpg
   palette:
      # Palette toggle for light mode
     - scheme: default
@@ -23,6 +24,23 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 extra:
+  analytics: 
+    provider: google
+    property: G-C0EGN6D7BM
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaceSg5cA0pXtq624Ii7evfz1uRDPyyXR4qclW1dCEMm5-2w/viewform?usp=sf_link" target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/solid/envelope
       name: Email Us
