@@ -1,5 +1,7 @@
 # **Introduction to TREC Interactive Knowledge Assistance Track**
 
+*Last updated: June 13, 2023*
+
 Voice-based assistant interactions are now widespread, with a recent [Comscore](https://www.comscore.com/Insights/Blog/Smart-Speaker-Penetration-Hits-20-Percent-of-US-Wi-Fi-Households) report showing that over 20% of homes in America own a smart speaker. Furthermore, the recent announcement of *assistant-enabled smart glasses* from leading tech companies continues this trend towards real-world interaction. However, despite current assistants' ability to perform well-defined simple actions, their ability to support information seeking in conversations continues to be limited.
 
 Conversational Information Seeking (CIS) is an established and important research direction. It is of interest to the broad research community within information retrieval, such as ranking, summarizing and question answering (QA), as well as for natural language processing and dialogue systems communities.
@@ -41,4 +43,6 @@ All data associated with this work is licensed and released under a
 
 # **Announcements**
 
-- <span style="color:red">New! Guidelines released!</span> 
+:boom: <span style="color:red">New! Sample topics released! See the data section of the website.</span> 
+
+:boom: <span style="color:red">New! Guidelines released!</span> 

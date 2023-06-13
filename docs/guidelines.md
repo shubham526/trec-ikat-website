@@ -76,7 +76,7 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 -   If a source passage occurs in multiple responses, it will be ranked by its first response. 
 
--   Each provenance is written in the format doc_id:passage_id.
+-   Each provenance is written in the format *doc_id:passage_id*.
 
 ### **PTKB Statement (provenance) Ranking**
 
@@ -88,9 +88,9 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 ## **Collection**
 
-The text collection contains a subset of ClueWeb22 documents, prepared by the organizers in collaboration with CMU. The goal is to retrieve passages from target open-domain text collections. Provenance must be provided from documents in the collection. 
+The text collection contains a subset of **ClueWeb22-B** documents, prepared by the organizers in collaboration with CMU. The goal is to retrieve passages from target open-domain text collections. Provenance must be provided from documents in the collection. 
 
-**Note.** Each participating team must sign an individual agreement and return it to the organizers to be able to download the collection. The individual agreement can be found [here](https://lemurproject.org/clueweb22/obtain.php).
+:exclamation: :boom: **Note.** Each participating team must sign an individual agreement and return it to the organizers to be able to download the collection. The individual agreement can be found [here](https://lemurproject.org/clueweb22/obtain.php).
 
 
 ### **Passage Segmentation** 
