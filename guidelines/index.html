@@ -692,160 +692,108 @@
 <p>An example document with some passage segmentation is provided in TrecWeb format below for illustration purposes:</p>
 <p><img alt="Picture depicting passage segmentation for iKAT" src="../passage-segmentation.png" /></p>
 <h2 id="topic-format"><strong>Topic Format</strong></h2>
-<p>We will provide several sample topics with example baseline runs for validation and testing. Below is a sample topics file with two subtrees of the same topic. Subtrees are identified by topic and subtree ID,  i.e topic 1, subtree 2 is 1-2. Also a passage_provenance field with a list of provenance passages and ptkb_provenance field with a list of provenance statements from PTKB, that are used for generating the response, are included. An example is shown below for illustrative purposes. </p>
+<p>We will provide several sample topics with example baseline runs for validation and testing. Below is a sample topics file with two subtrees of the same topic. Subtrees are identified by topic and subtree ID,  i.e topic 1, subtree 2 is <code>1-2</code>. Also a <code>passage_provenance</code> field with a list of provenance passages and <code>ptkb_provenance</code> field with a list of provenance statements from PTKB, that are used for generating the response, are included. An example is shown below for illustrative purposes. </p>
 <pre><code>[
   {
     &quot;number&quot;: &quot;1-1&quot;,
-    &quot;title&quot;: &quot;Finding a University&quot;,
-    &quot;ptkb&quot;: {
-      &quot;1&quot;: &quot;I’m 26 years old&quot;,
-      &quot;2&quot;: &quot;I have bachelor degree of computer science from Tilburg university&quot;,
-      &quot;3&quot;: &quot;My interesting bachelor courses are data structure, algorithm, data mining, and artificial intelligence&quot;,
-      &quot;4&quot;: &quot;I didn’t like computer architecture and logical circuits courses&quot;,
-      &quot;5&quot;: &quot;I live in the Netherlands&quot;,
-      &quot;6&quot;: &quot;I worked as a web developer for 2 years&quot;,
-      &quot;7&quot;: &quot;My bachelor GPA is 5.6&quot;,
-      &quot;8&quot;: &quot;My TOEFL SCORE is 91&quot;
-    },
-    &quot;turns&quot;: [
-      {
-        &quot;turn_id&quot;: &quot;1&quot;,
-        &quot;utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
-        &quot;resolved_utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
-        &quot;response&quot;: &quot;Do you want to continue your bachelor studies and obtain a degree in computer science?&quot;,
-        &quot;ptkb_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;2&quot;,
-            &quot;text&quot;: &quot;I have bachelor degree of computer science from Tilburg university&quot;,
-            &quot;score&quot;: 0.9
-          }
-        ],
-        &quot;passage_provenance&quot;: []
-      },
-      {
-        &quot;turn_id&quot;: &quot;2&quot;,
-        &quot;utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
-        &quot;resolved_utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
-        &quot;response&quot;: &quot;Do you want to study abroad?&quot;,
-        &quot;ptkb_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;5&quot;,
-            &quot;text&quot;: &quot;I live in the Netherlands&quot;,
-            &quot;score&quot;: 0.6
-          }
-        ],
-        &quot;passage_provenance&quot;: []
-      },
-      {
-        &quot;turn_id&quot;: &quot;3&quot;,
-        &quot;utterance&quot;: &quot;No, I don’t want to go abroad.&quot;,
-        &quot;resolved_utterance&quot;: &quot;No, I don’t want to go abroad.&quot;,
-        &quot;response&quot;: &quot;I can help you with finding a university for continuing your studies in the netherlands as a computer science student. Take a look at these Top Computer Science Universities in the Netherlands: Delft University of Technology. Eindhoven University of Technology. Vrije Universiteit Amsterdam. University of Amsterdam. Leiden University. Radboud University. Utrecht University. University of Twente&quot;,
-        &quot;ptkb_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;2&quot;,
-            &quot;text&quot;: &quot;I have bachelor degree of computer science from Tilburg university&quot;,
-            &quot;score&quot;: 0.8
-          },
-          {
-            &quot;id&quot;: &quot;5&quot;,
-            &quot;text&quot;: &quot;I live in the Netherlands&quot;,
-            &quot;score&quot;: 0.9
-          }
-        ],
-        &quot;passage_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;clueweb22-en0034-09-03452:1&quot;,
-            &quot;text&quot;: &quot;...&quot;,
-            &quot;score&quot;: 0.88
-          }
-        ]
-      }
-    ]
-  },
+        &quot;title&quot;: &quot;Finding a university&quot;,
+        &quot;ptkb&quot;: {
+            &quot;1&quot;: &quot;I graduated from Tilburg university.&quot;,
+            &quot;2&quot;: &quot;I live in the Netherlands.&quot;,
+            &quot;3&quot;: &quot;I'm allergic to peanuts.&quot;,
+            &quot;4&quot;: &quot;I worked as a web developer for 2 years.&quot;,
+            &quot;5&quot;: &quot;I have a bachelor's degree in computer science.&quot;,
+            &quot;6&quot;: &quot;I like Indian food.&quot;,
+            &quot;7&quot;: &quot;My bachelor's GPA is 5.6.&quot;,
+            &quot;8&quot;: &quot;I'm 26 years old.&quot;,
+            &quot;9&quot;: &quot;My TOEFL SCORE is 91.&quot;,
+            &quot;10&quot;: &quot;My interesting bachelor courses are data structure, algorithm, data mining, and artificial intelligence.&quot;,
+            &quot;11&quot;: &quot;I didn't like computer architecture and logical circuits courses.&quot;
+        },
+        &quot;turns&quot;: [
+            {
+                &quot;turn_id&quot;: 1,
+                &quot;utterance&quot;: &quot;I want to start my master's degree, can you help me with finding a university?&quot;,
+                &quot;resolved_utterance&quot;: &quot;I want to start my master's degree, can you help me with finding a university?&quot;,
+                &quot;response&quot;: &quot;Do you want to continue your bachelor's studies and obtain a degree in computer science?&quot;,
+                &quot;ptkb_provenance&quot;: [
+                    5
+                ],
+                &quot;response_provenance&quot;: []
+            },
+            {
+                &quot;turn_id&quot;: 2,
+                &quot;utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
+                &quot;resolved_utterance&quot;: &quot;Yes, I want to continue my studies in computer science.&quot;,
+                &quot;response&quot;: &quot;Do you want to study in the Netherlands, Europe, or somewhere further away?&quot;,
+                &quot;ptkb_provenance&quot;: [
+                    2
+                ],
+                &quot;response_provenance&quot;: []
+            },
+            {
+                &quot;turn_id&quot;: 3,
+                &quot;utterance&quot;: &quot;I'd like to stay here.&quot;,
+                &quot;resolved_utterance&quot;: &quot;I'd like to stay in the Netherlands.&quot;,
+                &quot;response&quot;: &quot;I can help you with finding a university for continuing your studies in the Netherlands as a computer science student. Take a look at these Top Computer Science Universities in the Netherlands: Delft University of Technology, Eindhoven University of Technology, Vrije Universiteit Amsterdam, University of Amsterdam, Leiden University, Radboud University, Utrecht University, University of Twente&quot;,
+                &quot;ptkb_provenance&quot;: [
+                    5,
+                    2
+                ],
+                &quot;response_provenance&quot;: [
+                    &quot;clueweb22-en0034-09-03452:1&quot;
+                ]
+            },
+  }
   {
-    &quot;number&quot;: &quot;1-2&quot;,
-    &quot;title&quot;: &quot;Finding a University&quot;,
-    &quot;ptkb&quot;: {
-      &quot;1&quot;: &quot;I cannot withstand the temperature below -12 for long time&quot;,
-      &quot;2&quot;: &quot;I’m used to heavy rains in the Netherlands&quot;,
-      &quot;3&quot;: &quot;I have bachelor degree of computer science with GPA of 3.3 out of 4.0&quot;,
-      &quot;4&quot;: &quot;My Toefl score is 95&quot;,
-      &quot;5&quot;: &quot;I have registered for GRE exam&quot;,
-      &quot;6&quot;: &quot;I’m from Netherlands&quot;,
-      &quot;7&quot;: &quot;I obtained my bachelor degree from UVA&quot;,
-      &quot;8&quot;: &quot;I’m moving to Canada to study master&quot;
-    },
-    &quot;turns&quot;: [
-      {
-        &quot;number&quot;: &quot;1&quot;,
-        &quot;utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
-        &quot;resolved_utterance&quot;: &quot;I want to start my master’s degree, can you help me with finding a university?&quot;,
-        &quot;response&quot;: &quot;Sure, do you want to study computer science?&quot;,
-        &quot;ptkb_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;3&quot;,
-            &quot;text&quot;: &quot;I have bachelor degree of computer science with GPA of 3.3 out of 4.0&quot;,
-            &quot;score&quot;: 0.8
-          },
-          {
-            &quot;id&quot;: &quot;8&quot;,
-            &quot;text&quot;: &quot;I’m moving to Canada to study master&quot;,
-            &quot;score&quot;: 0.9
-          }
-        ],
-        &quot;passage_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;clueweb22-en0034-09-03452:1&quot;,
-            &quot;text&quot;: &quot;...&quot;,
-            &quot;score&quot;: 0.88
-          }
-        ]
-      },
-      {
-        &quot;number&quot;: &quot;2&quot;,
-        &quot;utterance&quot;: &quot;Yes, I want to pursue my education in computer science. Can you tell me the name of the best universities?&quot;,
-        &quot;resolved_utterance&quot;: &quot;Yes, I want to pursue my education in computer science. Can you tell me the name of the best computer science universities in Canada?&quot;,
-        &quot;response&quot;: &quot;Here are the best universities for computer science in Canada: University of British Columbia, University of Alberta, Concordia University, Simon Fraser University, The University of Toronto&quot;,
-        &quot;ptkb_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;8&quot;,
-            &quot;text&quot;: &quot;I’m moving to Canada to study master&quot;,
-            &quot;score&quot;: 0.95
-          }
-        ],
-        &quot;passage_provenance&quot;: [
-          {
-            &quot;id&quot;: &quot;clueweb22-en0026-31-15538:1&quot;,
-            &quot;text&quot;: &quot;...&quot;,
-            &quot;score&quot;: 0.9
-          },
-          {
-            &quot;id&quot;: &quot;clueweb22-en0026-31-15538:4&quot;,
-            &quot;text&quot;: &quot;...&quot;,
-            &quot;score&quot;: 0.88
-          },
-          {
-            &quot;id&quot;: &quot;clueweb22-en0026-31-15538:6&quot;,
-            &quot;text&quot;: &quot;...&quot;,
-            &quot;score&quot;: 0.87
-          },
-          {
-            &quot;id&quot;: &quot;clueweb22-en0040-41-06056:0&quot;,
-            &quot;text&quot;: &quot;...&quot;,
-            &quot;score&quot;: 0.8
-          }
-        ]
-      },
-      {
-        &quot;number&quot;: &quot;3&quot;,
-        &quot;utterance&quot;: &quot;Can you tell me more about the university of Totonto? &quot;,
-        &quot;resolved_utterance&quot;: &quot;Can you tell me more about the university of Totonto? &quot;,
-        &quot;response&quot;: &quot;Sure, what do you want to know about? Do you want to know about its campus, community, or programs?&quot;,
-        &quot;ptkb_provenance&quot;: [],
-        &quot;passage_provenance&quot;: []
-      }
-    ]
+        &quot;number&quot;: &quot;1-2&quot;,
+        &quot;title&quot;: &quot;Finding a university&quot;,
+        &quot;ptkb&quot;: {
+            &quot;1&quot;: &quot;I don't like crazy cold weather.&quot;,
+            &quot;2&quot;: &quot;I don't have a driver's license.&quot;,
+            &quot;3&quot;: &quot;I plan to move to Canada.&quot;,
+            &quot;4&quot;: &quot;I'm from the Netherlands.&quot;,
+            &quot;5&quot;: &quot;I'm used to heavy rains in the Netherlands.&quot;,
+            &quot;6&quot;: &quot;I graduated from UvA.&quot;,
+            &quot;7&quot;: &quot;I have bachelor's degree in computer science.&quot;,
+            &quot;8&quot;: &quot;I speak English fluently.&quot;
+        },
+        &quot;turns&quot;: [
+            {
+                &quot;turn_id&quot;: 1,
+                &quot;utterance&quot;: &quot;I want to start my master's degree, can you help me with finding a university?&quot;,
+                &quot;resolved_utterance&quot;: &quot;I want to start my master's degree, can you help me with finding a university in Canada?&quot;,
+                &quot;response&quot;: &quot;Sure, do you want to study computer science?&quot;,
+                &quot;ptkb_provenance&quot;: [
+                    7,
+                    3
+                ],
+                &quot;response_provenance&quot;: []
+            },
+            {
+                &quot;turn_id&quot;: 2,
+                &quot;utterance&quot;: &quot;Yes, I want to pursue the same major. Can you tell me the name of the best universities?&quot;,
+                &quot;resolved_utterance&quot;: &quot;Yes, I want to pursue computer science. Can you tell me the name of the best computer science universities in Canada?&quot;,
+                &quot;response&quot;: &quot;Here are the top universities for computer science in Canada: 1) University of British Columbia, 2) University of Alberta, 3)Concordia University, 4) Simon Fraser University, 5)The University of Toronto&quot;,
+                &quot;ptkb_provenance&quot;: [],
+                &quot;response_provenance&quot;: [
+                    &quot;clueweb22-en0026-31-15538:1&quot;,
+                    &quot;clueweb22-en0026-31-15538:4&quot;,
+                    &quot;clueweb22-en0026-31-15538:6&quot;,
+                    &quot;clueweb22-en0040-41-06056:0&quot;
+                ]
+            },
+            {
+                &quot;turn_id&quot;: 3,
+                &quot;utterance&quot;: &quot;Which of them best suits me in terms of weather conditions?&quot;,
+                &quot;resolved_utterance&quot;: &quot;Which of the following universities best suits me in terms of weather conditions? 1) the University of British Columbia, 2) the University of Alberta, 3)Concordia University, 4) Simon Fraser University, and 5)The University of Toronto.&quot;,
+                &quot;response&quot;: &quot;I know you don't like very cold weather, but can you give me an estimation of the temperature that is acceptable for you?&quot;,
+                &quot;ptkb_provenance&quot;: [
+                    1,
+                    5
+                ],
+                &quot;response_provenance&quot;: []
+            },
   }
 ]
 
@@ -914,13 +862,13 @@ degrees Celsius) in winter which is suitable for you. The university of Toronto 
 <ol>
 <li>The <strong>run_name</strong> is a run submission identifier that should be descriptive and unique to your team and institution.</li>
 <li>The <strong>run_type</strong> is one of the two types listed above, <em>automatic</em> and <em>manual</em>.</li>
-<li>Each <strong>turn</strong> in the <strong>turns</strong> list should contain a <strong>turn_identifier</strong>, consisting of the <strong>topic_id-subtree_id</strong> and <strong>turn_id</strong> concatenated with an <strong>underscore</strong>, e.g. 1-2_3 for topic 1, subtree 2, turn 3.</li>
+<li>Each <strong>turn</strong> in the <strong>turns</strong> list should contain a <strong>turn_identifier</strong>, consisting of the <strong>topic_id-subtree_id</strong> and <strong>turn_id</strong> concatenated with an <strong>underscore</strong>, e.g. <code>1-2_3</code> for topic 1, subtree 2, turn 3.</li>
 <li>Each turn should also contain a list of <strong>responses</strong>. A response consists of <strong>text</strong> and a <strong>provenance list</strong>. Each provenance should have an <strong>id</strong>, <strong>text</strong>, and <strong>score</strong>.</li>
 <li>Each turn includes a <strong>sorted list of statements from PTKB</strong> based on the <strong>relevance score of each statement</strong> from PTKB to the current turn.</li>
 </ol>
 <p>For provenance ranking, this will be converted to a traditional TREC run format:</p>
 <p><code>31_1-1 Q0 clueweb22-en0000-94-02275:0 1 0.5 sample_run</code></p>
-<p>Runs may include up to 1000 responses for each user turn. For provenance ranking, only the first 1000 pieces of unique provenance will be used. As in previous years of CAsT, only a limited top-k responses and provenances will be assessed according to resource constraints. </p>
+<p>Runs may include up to 1000 responses for each user turn. For provenance ranking, only the first 1000 pieces of unique provenance will be used. As in previous years of CAsT, only a limited top-K responses and provenances will be assessed according to resource constraints. </p>
 <h2 id="evaluation"><strong>Evaluation</strong></h2>
 <p>We will use the relevance assessment methods used in previous years of CAsT for relevance to individual turns.</p>
 <ol>
