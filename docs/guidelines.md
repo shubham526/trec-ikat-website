@@ -103,162 +103,110 @@ An example document with some passage segmentation is provided in TrecWeb format
 ![Picture depicting passage segmentation for iKAT](passage-segmentation.png)
 
 ## **Topic Format**
-We will provide several sample topics with example baseline runs for validation and testing. Below is a sample topics file with two subtrees of the same topic. Subtrees are identified by topic and subtree ID,  i.e topic 1, subtree 2 is 1-2. Also a passage_provenance field with a list of provenance passages and ptkb_provenance field with a list of provenance statements from PTKB, that are used for generating the response, are included. An example is shown below for illustrative purposes. 
+We will provide several sample topics with example baseline runs for validation and testing. Below is a sample topics file with two subtrees of the same topic. Subtrees are identified by topic and subtree ID,  i.e topic 1, subtree 2 is `1-2`. Also a `passage_provenance` field with a list of provenance passages and `ptkb_provenance` field with a list of provenance statements from PTKB, that are used for generating the response, are included. An example is shown below for illustrative purposes. 
 
 ```
 [
   {
     "number": "1-1",
-    "title": "Finding a University",
-    "ptkb": {
-      "1": "I’m 26 years old",
-      "2": "I have bachelor degree of computer science from Tilburg university",
-      "3": "My interesting bachelor courses are data structure, algorithm, data mining, and artificial intelligence",
-      "4": "I didn’t like computer architecture and logical circuits courses",
-      "5": "I live in the Netherlands",
-      "6": "I worked as a web developer for 2 years",
-      "7": "My bachelor GPA is 5.6",
-      "8": "My TOEFL SCORE is 91"
-    },
-    "turns": [
-      {
-        "turn_id": "1",
-        "utterance": "I want to start my master’s degree, can you help me with finding a university?",
-        "resolved_utterance": "I want to start my master’s degree, can you help me with finding a university?",
-        "response": "Do you want to continue your bachelor studies and obtain a degree in computer science?",
-        "ptkb_provenance": [
-          {
-            "id": "2",
-            "text": "I have bachelor degree of computer science from Tilburg university",
-            "score": 0.9
-          }
-        ],
-        "passage_provenance": []
-      },
-      {
-        "turn_id": "2",
-        "utterance": "Yes, I want to continue my studies in computer science.",
-        "resolved_utterance": "Yes, I want to continue my studies in computer science.",
-        "response": "Do you want to study abroad?",
-        "ptkb_provenance": [
-          {
-            "id": "5",
-            "text": "I live in the Netherlands",
-            "score": 0.6
-          }
-        ],
-        "passage_provenance": []
-      },
-      {
-        "turn_id": "3",
-        "utterance": "No, I don’t want to go abroad.",
-        "resolved_utterance": "No, I don’t want to go abroad.",
-        "response": "I can help you with finding a university for continuing your studies in the netherlands as a computer science student. Take a look at these Top Computer Science Universities in the Netherlands: Delft University of Technology. Eindhoven University of Technology. Vrije Universiteit Amsterdam. University of Amsterdam. Leiden University. Radboud University. Utrecht University. University of Twente",
-        "ptkb_provenance": [
-          {
-            "id": "2",
-            "text": "I have bachelor degree of computer science from Tilburg university",
-            "score": 0.8
-          },
-          {
-            "id": "5",
-            "text": "I live in the Netherlands",
-            "score": 0.9
-          }
-        ],
-        "passage_provenance": [
-          {
-            "id": "clueweb22-en0034-09-03452:1",
-            "text": "...",
-            "score": 0.88
-          }
-        ]
-      }
-    ]
-  },
+        "title": "Finding a university",
+        "ptkb": {
+            "1": "I graduated from Tilburg university.",
+            "2": "I live in the Netherlands.",
+            "3": "I'm allergic to peanuts.",
+            "4": "I worked as a web developer for 2 years.",
+            "5": "I have a bachelor's degree in computer science.",
+            "6": "I like Indian food.",
+            "7": "My bachelor's GPA is 5.6.",
+            "8": "I'm 26 years old.",
+            "9": "My TOEFL SCORE is 91.",
+            "10": "My interesting bachelor courses are data structure, algorithm, data mining, and artificial intelligence.",
+            "11": "I didn't like computer architecture and logical circuits courses."
+        },
+        "turns": [
+            {
+                "turn_id": 1,
+                "utterance": "I want to start my master's degree, can you help me with finding a university?",
+                "resolved_utterance": "I want to start my master's degree, can you help me with finding a university?",
+                "response": "Do you want to continue your bachelor's studies and obtain a degree in computer science?",
+                "ptkb_provenance": [
+                    5
+                ],
+                "response_provenance": []
+            },
+            {
+                "turn_id": 2,
+                "utterance": "Yes, I want to continue my studies in computer science.",
+                "resolved_utterance": "Yes, I want to continue my studies in computer science.",
+                "response": "Do you want to study in the Netherlands, Europe, or somewhere further away?",
+                "ptkb_provenance": [
+                    2
+                ],
+                "response_provenance": []
+            },
+            {
+                "turn_id": 3,
+                "utterance": "I'd like to stay here.",
+                "resolved_utterance": "I'd like to stay in the Netherlands.",
+                "response": "I can help you with finding a university for continuing your studies in the Netherlands as a computer science student. Take a look at these Top Computer Science Universities in the Netherlands: Delft University of Technology, Eindhoven University of Technology, Vrije Universiteit Amsterdam, University of Amsterdam, Leiden University, Radboud University, Utrecht University, University of Twente",
+                "ptkb_provenance": [
+                    5,
+                    2
+                ],
+                "response_provenance": [
+                    "clueweb22-en0034-09-03452:1"
+                ]
+            },
+  }
   {
-    "number": "1-2",
-    "title": "Finding a University",
-    "ptkb": {
-      "1": "I cannot withstand the temperature below -12 for long time",
-      "2": "I’m used to heavy rains in the Netherlands",
-      "3": "I have bachelor degree of computer science with GPA of 3.3 out of 4.0",
-      "4": "My Toefl score is 95",
-      "5": "I have registered for GRE exam",
-      "6": "I’m from Netherlands",
-      "7": "I obtained my bachelor degree from UVA",
-      "8": "I’m moving to Canada to study master"
-    },
-    "turns": [
-      {
-        "number": "1",
-        "utterance": "I want to start my master’s degree, can you help me with finding a university?",
-        "resolved_utterance": "I want to start my master’s degree, can you help me with finding a university?",
-        "response": "Sure, do you want to study computer science?",
-        "ptkb_provenance": [
-          {
-            "id": "3",
-            "text": "I have bachelor degree of computer science with GPA of 3.3 out of 4.0",
-            "score": 0.8
-          },
-          {
-            "id": "8",
-            "text": "I’m moving to Canada to study master",
-            "score": 0.9
-          }
-        ],
-        "passage_provenance": [
-          {
-            "id": "clueweb22-en0034-09-03452:1",
-            "text": "...",
-            "score": 0.88
-          }
-        ]
-      },
-      {
-        "number": "2",
-        "utterance": "Yes, I want to pursue my education in computer science. Can you tell me the name of the best universities?",
-        "resolved_utterance": "Yes, I want to pursue my education in computer science. Can you tell me the name of the best computer science universities in Canada?",
-        "response": "Here are the best universities for computer science in Canada: University of British Columbia, University of Alberta, Concordia University, Simon Fraser University, The University of Toronto",
-        "ptkb_provenance": [
-          {
-            "id": "8",
-            "text": "I’m moving to Canada to study master",
-            "score": 0.95
-          }
-        ],
-        "passage_provenance": [
-          {
-            "id": "clueweb22-en0026-31-15538:1",
-            "text": "...",
-            "score": 0.9
-          },
-          {
-            "id": "clueweb22-en0026-31-15538:4",
-            "text": "...",
-            "score": 0.88
-          },
-          {
-            "id": "clueweb22-en0026-31-15538:6",
-            "text": "...",
-            "score": 0.87
-          },
-          {
-            "id": "clueweb22-en0040-41-06056:0",
-            "text": "...",
-            "score": 0.8
-          }
-        ]
-      },
-      {
-        "number": "3",
-        "utterance": "Can you tell me more about the university of Totonto? ",
-        "resolved_utterance": "Can you tell me more about the university of Totonto? ",
-        "response": "Sure, what do you want to know about? Do you want to know about its campus, community, or programs?",
-        "ptkb_provenance": [],
-        "passage_provenance": []
-      }
-    ]
+        "number": "1-2",
+        "title": "Finding a university",
+        "ptkb": {
+            "1": "I don't like crazy cold weather.",
+            "2": "I don't have a driver's license.",
+            "3": "I plan to move to Canada.",
+            "4": "I'm from the Netherlands.",
+            "5": "I'm used to heavy rains in the Netherlands.",
+            "6": "I graduated from UvA.",
+            "7": "I have bachelor's degree in computer science.",
+            "8": "I speak English fluently."
+        },
+        "turns": [
+            {
+                "turn_id": 1,
+                "utterance": "I want to start my master's degree, can you help me with finding a university?",
+                "resolved_utterance": "I want to start my master's degree, can you help me with finding a university in Canada?",
+                "response": "Sure, do you want to study computer science?",
+                "ptkb_provenance": [
+                    7,
+                    3
+                ],
+                "response_provenance": []
+            },
+            {
+                "turn_id": 2,
+                "utterance": "Yes, I want to pursue the same major. Can you tell me the name of the best universities?",
+                "resolved_utterance": "Yes, I want to pursue computer science. Can you tell me the name of the best computer science universities in Canada?",
+                "response": "Here are the top universities for computer science in Canada: 1) University of British Columbia, 2) University of Alberta, 3)Concordia University, 4) Simon Fraser University, 5)The University of Toronto",
+                "ptkb_provenance": [],
+                "response_provenance": [
+                    "clueweb22-en0026-31-15538:1",
+                    "clueweb22-en0026-31-15538:4",
+                    "clueweb22-en0026-31-15538:6",
+                    "clueweb22-en0040-41-06056:0"
+                ]
+            },
+            {
+                "turn_id": 3,
+                "utterance": "Which of them best suits me in terms of weather conditions?",
+                "resolved_utterance": "Which of the following universities best suits me in terms of weather conditions? 1) the University of British Columbia, 2) the University of Alberta, 3)Concordia University, 4) Simon Fraser University, and 5)The University of Toronto.",
+                "response": "I know you don't like very cold weather, but can you give me an estimation of the temperature that is acceptable for you?",
+                "ptkb_provenance": [
+                    1,
+                    5
+                ],
+                "response_provenance": []
+            },
   }
 ]
 
@@ -329,7 +277,7 @@ degrees Celsius) in winter which is suitable for you. The university of Toronto 
 
 1. The **run_name** is a run submission identifier that should be descriptive and unique to your team and institution.
 2. The **run_type** is one of the two types listed above, *automatic* and *manual*.
-3. Each **turn** in the **turns** list should contain a **turn_identifier**, consisting of the **topic_id-subtree_id** and **turn_id** concatenated with an **underscore**, e.g. 1-2_3 for topic 1, subtree 2, turn 3.
+3. Each **turn** in the **turns** list should contain a **turn_identifier**, consisting of the **topic_id-subtree_id** and **turn_id** concatenated with an **underscore**, e.g. `1-2_3` for topic 1, subtree 2, turn 3.
 4. Each turn should also contain a list of **responses**. A response consists of **text** and a **provenance list**. Each provenance should have an **id**, **text**, and **score**.
 5. Each turn includes a **sorted list of statements from PTKB** based on the **relevance score of each statement** from PTKB to the current turn.
 
@@ -337,7 +285,7 @@ For provenance ranking, this will be converted to a traditional TREC run format:
 
 `31_1-1 Q0 clueweb22-en0000-94-02275:0 1 0.5 sample_run`
 
-Runs may include up to 1000 responses for each user turn. For provenance ranking, only the first 1000 pieces of unique provenance will be used. As in previous years of CAsT, only a limited top-k responses and provenances will be assessed according to resource constraints. 
+Runs may include up to 1000 responses for each user turn. For provenance ranking, only the first 1000 pieces of unique provenance will be used. As in previous years of CAsT, only a limited top-K responses and provenances will be assessed according to resource constraints. 
 
 ## **Evaluation**
 

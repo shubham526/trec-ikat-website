@@ -3,7 +3,13 @@
 ## **Sample Topic**
 We are releasing two sample conversations on the topic "Finding a University". Each conversation pertains to a different persona, and the conversation is personalized to that persona. You can find the sample topic [here](https://drive.google.com/file/d/1ZdVXNqnzP1XpYpJejIRn3pzva8Pke9v_/view?usp=drive_link).
 
-:exclamation: :boom: **We are going to release more train/dev topics some time next week (this week, if things go as planned!)**
+## :boom: **Topics for iKAT Year 1**
+
+|    File      |      Description      |
+|:------------|:---------------------|
+| 	[2023_train_topics.json](https://drive.google.com/file/d/1jXyiUkxAMWCVSXBv9qed5dgdx5vJe0r1/view?usp=sharing)       |       Train topics in JSON format. Contains 11 conversations spanning 8 topics.             |
+
+
 
 ## **Additional Data from TREC CAsT**
 Those who are eager to start developing and experimenting can also use the data from previous years' TREC CAsT. The iKAT topics are going to be similar, with the addition of the Personal Text Knowledge Base. For more information on TREC CAsT, [see the website](https://www.treccast.ai/) and read the overview papers [[2019]](https://arxiv.org/abs/2003.13624) [[2020]](https://scholar.google.com/scholar_url?url=https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/callan/Papers/trec2021-dalton.pdf&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=4712262702816537608&ei=En6IZNaeLcPFmAGMo47oDQ&scisig=AGlGAw9ggvQnzye9tQlrvoob1Js5) [[2021]](https://www.cs.cmu.edu/~callan/Papers/trec22-Jeffrey_Dalton.pdf) [[2022]](https://trec.nist.gov/pubs/trec31/papers/Overview_cast.pdf)
