@@ -1,8 +1,5 @@
 # **Datasets and Resources**
 
-## **Sample Topic**
-We are releasing two sample conversations on the topic "Finding a University". Each conversation pertains to a different persona, and the conversation is personalized to that persona. You can find the sample topic [here](https://drive.google.com/file/d/1ZdVXNqnzP1XpYpJejIRn3pzva8Pke9v_/view?usp=drive_link).
-
 ## :boom: **Topics for iKAT Year 1**
 
 |    File      |      Description      |
