@@ -4,8 +4,8 @@
 
 |    File      |      Description      |
 |:------------|:---------------------|
-| 	[2023_train_topics.json](https://drive.google.com/file/d/1_mWmmxlkdwBlUd2Xuj8iDHm5K33nhOz7/view?usp=sharing)       |       Train topics in JSON format. Contains 11 conversations spanning 8 topics.             |
-| 	[2023_train_topics_psg_text.json](https://drive.google.com/file/d/1_XqtdjyZmaLUuORx_qKjyvjJqRzyiC5h/view?usp=sharing)       |       Text of provenance passages in the train topics.             |
+| 	[2023_train_topics.json](https://gla-my.sharepoint.com/:u:/g/personal/shubham_chatterjee_glasgow_ac_uk/EVNNL0Pyi3hDmoJsGQMnwL8B7Z2v1jvbmCAtlvx3z74lEQ?e=cAj7qQ)       |       Train topics in JSON format. Contains 11 conversations spanning 8 topics.             |
+| 	[2023_train_topics_psg_text.jsonl](https://gla-my.sharepoint.com/:u:/g/personal/shubham_chatterjee_glasgow_ac_uk/EbUkpRSgi15KmmXEOimYNSgBB5SnFbY5m28FIRF_mwtUIg?e=c3deq1)       |       Text of provenance passages in the train topics.             |
 
 
 
