@@ -4,7 +4,8 @@
 
 |    File      |      Description      |
 |:------------|:---------------------|
-| 	[2023_train_topics.json](https://drive.google.com/file/d/1jXyiUkxAMWCVSXBv9qed5dgdx5vJe0r1/view?usp=sharing)       |       Train topics in JSON format. Contains 11 conversations spanning 8 topics.             |
+| 	[2023_train_topics.json](https://drive.google.com/file/d/1_mWmmxlkdwBlUd2Xuj8iDHm5K33nhOz7/view?usp=sharing)       |       Train topics in JSON format. Contains 11 conversations spanning 8 topics.             |
+| 	[2023_train_topics_psg_text.json](https://drive.google.com/file/d/1_XqtdjyZmaLUuORx_qKjyvjJqRzyiC5h/view?usp=sharing)       |       Text of provenance passages in the train topics.             |
 
 
 
