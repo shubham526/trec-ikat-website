@@ -280,6 +280,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collection-trec-ikat-2023-clueweb22-b" class="md-nav__link">
+    Collection: TREC iKAT 2023 ClueWeb22-B
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-data-from-trec-cast" class="md-nav__link">
     Additional Data from TREC CAsT
   </a>
@@ -377,6 +391,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collection-trec-ikat-2023-clueweb22-b" class="md-nav__link">
+    Collection: TREC iKAT 2023 ClueWeb22-B
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-data-from-trec-cast" class="md-nav__link">
     Additional Data from TREC CAsT
   </a>
@@ -460,6 +488,54 @@
 </tr>
 </tbody>
 </table>
+<h2 id="collection-trec-ikat-2023-clueweb22-b"><img alt="💥" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a5.svg" title=":boom:" /> <strong>Collection: TREC iKAT 2023 ClueWeb22-B</strong></h2>
+<p>The collection distribution is being handled directly by CMU and not the iKAT organizers. Please follow these steps to get your data license ASAP:</p>
+<ul>
+<li>Sign the license form available on the <a href="https://lemurproject.org/clueweb22/obtain.php">ClueWeb22 project web page</a>.</li>
+<li>Send the form to CMU for approval (<strong>jlm4@andrew.cmu.edu</strong>)</li>
+</ul>
+<p>Please give enough time to the CMU licensing office to accept your request. A download link will be sent to you by the ClueWeb22 team at CMU.</p>
+<p><strong>Note.</strong> </p>
+<ul>
+<li>CMU requires a signature from the organization (i.e., the university or company), not an individual who wants to use the data. This can slow down the process at your end too. So, it’s useful to start the process ASAP.</li>
+<li>If you already have an accepted license for ClueWeb22, you don’t need a new form. Please let us know if that’s the case.</li>
+</ul>
+<h2 id="additional-resources"><img alt="💥" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a5.svg" title=":boom:" /> <strong>Additional Resources</strong></h2>
+<p>We provide the following additional resources for the teams:</p>
+<ul>
+<li><strong>Document segments in <code>JSONL</code> format.</strong><ul>
+<li>These files contain passages in the form <code>{"id": "[passage id]", "contents": "[passage text]", "url": "[ClueWeb22 document URL]"}</code></li>
+<li>Passage IDs are structured as: <code>doc_id:passage_number</code></li>
+<li>Total download size is approximately 31 GB.</li>
+<li>Total number of passages is 116,838,987</li>
+</ul>
+</li>
+<li><strong>Document segments in <code>TrecWeb</code> format.</strong><ul>
+<li>Format as shown on website.</li>
+<li>Total download size is approximately 31 GB</li>
+</ul>
+</li>
+<li><strong>Passage hashes.</strong><ul>
+<li>TSV file containing MD5 hashes of passage texts.</li>
+<li>The <code>.tsv</code> file has this format: <code>doc_id   passage_number    passage_MD5</code></li>
+<li>Total download size is 2.2 GB</li>
+</ul>
+</li>
+<li><strong>Passage index.</strong><ul>
+<li>Lucene index generated from the <code>JSONL</code> passage files above using Pyserini.</li>
+<li>The files form a single <code>.tar.bz2</code> archive split into sections for simpler downloading due to the overall size.</li>
+<li>To extract the archive, once downloaded, you must combine each of the sections in name order back into a single file:
+<code>cat ikat_2023_passage_index.tar.bz2.part* &gt; ikat_203_passage_index.tar.bz2</code></li>
+<li>Total download size is approximately 150 GB</li>
+</ul>
+</li>
+</ul>
+<p><strong>How do I access this data?</strong> Each team should use a URL of <code>https://ikattrecweb.grill.science/&lt;team_name&gt;</code> to access the files. The page will ask for a userID and password. Enter the login details which you obtained from the iKAT organizers. You should see a page which lists each type of data and has links to the individual files listed above, along with their checksum files.</p>
+<p><strong>NOTE:</strong> </p>
+<ul>
+<li>Currently, these teams can access this URL: <code>MLIA</code>,  <code>TREMA_UNH</code> and <code>Nota</code> . Please send us a message privately via slack or through the email and we will share the login details with you.</li>
+<li>Other teams: You have shared IPs in the <code>10.x.x.x</code> range which is for private networks, so we need another IP from you. Can you please share another suitable IP with us so that we may configure the above download link to work for you?</li>
+</ul>
 <h2 id="additional-data-from-trec-cast"><strong>Additional Data from TREC CAsT</strong></h2>
 <p>Those who are eager to start developing and experimenting can also use the data from previous years' TREC CAsT. The iKAT topics are going to be similar, with the addition of the Personal Text Knowledge Base. For more information on TREC CAsT, <a href="https://www.treccast.ai/">see the website</a> and read the overview papers <a href="https://arxiv.org/abs/2003.13624">[2019]</a> <a href="https://scholar.google.com/scholar_url?url=https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/callan/Papers/trec2021-dalton.pdf&amp;hl=en&amp;sa=T&amp;oi=gsb-gga&amp;ct=res&amp;cd=0&amp;d=4712262702816537608&amp;ei=En6IZNaeLcPFmAGMo47oDQ&amp;scisig=AGlGAw9ggvQnzye9tQlrvoob1Js5">[2020]</a> <a href="https://www.cs.cmu.edu/~callan/Papers/trec22-Jeffrey_Dalton.pdf">[2021]</a> <a href="https://trec.nist.gov/pubs/trec31/papers/Overview_cast.pdf">[2022]</a></p>
 <p><strong>Note.</strong> TREC CAsT did not include a PTKB but you can be creative and modify the data according to your needs. Also, TREC CAsT used different collections (Wikipedia, KILT, MS MARCO, etc.) at different stages. <strong><em>iKAT will be using a subset of the recently released ClueWeb22-B</em></strong>.</p>
