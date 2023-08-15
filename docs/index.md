@@ -1,6 +1,6 @@
 # **Introduction to TREC Interactive Knowledge Assistance Track**
 
-*Last updated: June 29, 2023*
+*Last updated: August 15, 2023*
 
 Voice-based assistant interactions are now widespread, with a recent [Comscore](https://www.comscore.com/Insights/Blog/Smart-Speaker-Penetration-Hits-20-Percent-of-US-Wi-Fi-Households) report showing that over 20% of homes in America own a smart speaker. Furthermore, the recent announcement of *assistant-enabled smart glasses* from leading tech companies continues this trend towards real-world interaction. However, despite current assistants' ability to perform well-defined simple actions, their ability to support information seeking in conversations continues to be limited.
 
@@ -43,7 +43,9 @@ All data associated with this work is licensed and released under a
 
 # **Announcements**
 
-- :boom: <span style="color:red">New! Train topics released! See the data section of the website.</span> 
+- :boom: <span style="color:red">New! Additional data released for the participants. See the data section.</span>
+
+- New! Train topics released! See the data section of the website.
 
 - Sample topics released! See the data section of the website. 
 

@@ -9,6 +9,51 @@
 | 	[2023_test_topics.json](https://drive.google.com/file/d/1S4e1MjWSkCsfXfp7fAdyqTNnFMs2WIhI/view?usp=sharing)       |       Test topics in JSON format.             |
 | 	[2023_test_topics_psg_text.jsonl](https://drive.google.com/file/d/1YGhJAUEw9PPITPkrWP3EtnUsWiboh3eq/view?usp=sharing)       |       Text of provenance passages in the test topics.             |
 
+## :boom: **Collection: TREC iKAT 2023 ClueWeb22-B**
+
+The collection distribution is being handled directly by CMU and not the iKAT organizers. Please follow these steps to get your data license ASAP:
+
+- Sign the license form available on the [ClueWeb22 project web page](https://lemurproject.org/clueweb22/obtain.php).
+- Send the form to CMU for approval (**jlm4@andrew.cmu.edu**)
+
+Please give enough time to the CMU licensing office to accept your request. A download link will be sent to you by the ClueWeb22 team at CMU.
+
+**Note.** 
+
+- CMU requires a signature from the organization (i.e., the university or company), not an individual who wants to use the data. This can slow down the process at your end too. So, it’s useful to start the process ASAP.
+- If you already have an accepted license for ClueWeb22, you don’t need a new form. Please let us know if that’s the case.
+
+
+## :boom: **Additional Resources**
+
+We provide the following additional resources for the teams:
+
+- **Document segments in `JSONL` format.**
+	- These files contain passages in the form `{"id": "[passage id]", "contents": "[passage text]", "url": "[ClueWeb22 document URL]"}`
+	- Passage IDs are structured as: `doc_id:passage_number`
+	- Total download size is approximately 31 GB.
+	- Total number of passages is 116,838,987
+- **Document segments in `TrecWeb` format.**
+	- Format as shown on website.
+	- Total download size is approximately 31 GB
+- **Passage hashes.**
+	- TSV file containing MD5 hashes of passage texts.
+	- The `.tsv` file has this format: `doc_id   passage_number    passage_MD5`
+	- Total download size is 2.2 GB
+- **Passage index.**
+	- Lucene index generated from the `JSONL` passage files above using Pyserini.
+	- The files form a single `.tar.bz2` archive split into sections for simpler downloading due to the overall size.
+	- To extract the archive, once downloaded, you must combine each of the sections in name order back into a single file:
+	`cat ikat_2023_passage_index.tar.bz2.part* > ikat_203_passage_index.tar.bz2`
+	- Total download size is approximately 150 GB
+	
+**How do I access this data?** Each team should use a URL of `https://ikattrecweb.grill.science/<team_name>` to access the files. The page will ask for a userID and password. Enter the login details which you obtained from the iKAT organizers. You should see a page which lists each type of data and has links to the individual files listed above, along with their checksum files.
+
+**NOTE:** 
+
+- Currently, these teams can access this URL: `MLIA`,  `TREMA_UNH` and `Nota` . Please send us a message privately via slack or through the email and we will share the login details with you.
+- Other teams: You have shared IPs in the `10.x.x.x` range which is for private networks, so we need another IP from you. Can you please share another suitable IP with us so that we may configure the above download link to work for you?
+
 
 
 ## **Additional Data from TREC CAsT**

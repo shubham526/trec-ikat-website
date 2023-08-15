@@ -90,22 +90,6 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 The text collection contains a subset of **ClueWeb22-B** documents, prepared by the organizers in collaboration with CMU. The goal is to retrieve passages from target open-domain text collections. Provenance must be provided from documents in the collection. 
 
-### :exclamation: :boom: **Licence for ClueWeb22-B**
-
-Getting the license to use the collection can be time-consuming and would be handled by CMU, not the iKAT organizers. Please follow these steps to get your data license ASAP:
-
-- Sign the license form available on the [ClueWeb22 project web page](https://lemurproject.org/clueweb22/obtain.php).
-- Send the form to CMU for approval (**jlm4@andrew.cmu.edu**)
-
-Please give enough time to the CMU licensing office to accept your request. A download link will be sent to you by the ClueWeb22 team at CMU.
-
-**Note.** 
-
-- CMU requires a signature from the organization (i.e., the university or company), not an individual who wants to use the data. This can slow down the process at your end too. So, it’s useful to start the process ASAP.
-- If you already have an accepted license for ClueWeb22, you don’t need a new form. Please let us know if that’s the case.
-
-Please do feel free to reach out to us if you have any questions or doubts about the process, so we can prevent any delays in getting the data to you.
-
 
 ### **Passage Segmentation** 
 
@@ -318,7 +302,7 @@ Similar to CAsT year 4, only a subset of turns may be evaluated for provenance r
 |:--------------------------------:	|:------------:	|
 | Guidelines released              	| April 2023   	|
 | Test topics released             	| June 2023    	|
-| Submission deadline              	| August 2023  	|
+| **Submission deadline**              	| **August 31, 2023**  	|
 | Results released to participants 	| October 2023 	|
 
 
