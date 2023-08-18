@@ -238,7 +238,7 @@
   
     <li class="md-nav__item">
       <a href="../data/" class="md-nav__link">
-        Data
+        Data and Resources
       </a>
     </li>
   
@@ -623,14 +623,22 @@
 </ul>
 <p>We plan on providing baseline ranking and response generation methods. </p>
 <h3 id="submission-classes"><strong>Submission Classes</strong></h3>
+<p>There are two submission classes:</p>
 <ul>
 <li>
-<p>Automatic: These use raw utterances (with automatic rewrite/expansion) methods.</p>
+<p>Automatic: No manually labeled data can be used for this run type. This means that the models should solely rely on the current utterance, and the converation context (i.e., previous user utterance and system’s canonical responses).</p>
 </li>
 <li>
-<p>Manual: These use the manual human rewritten queries.</p>
+<p>Manual: The manual runs can use the manually annotated data in the models. This includes the following: </p>
+<ol>
+<li>The manual rewritten utterance of the current utterance</li>
+<li>The ground-truth relevant PTKB statements (<code>ptkb_provenance</code>) of the current utterance</li>
+<li>The ground-truth relevant PTKB statements (<code>ptkb_provenance</code>) of previous turns.</li>
+</ol>
 </li>
 </ul>
+<p><strong>Note.</strong> In either run type, the <strong>participants are not allowed to use any information from the future</strong>. In other words, you should assume that for each turn, the only available information is up and including the current user utterance -- the system reponse of the current turn, as well as anything beyond that are hidden.</p>
+<p>In the submission form, we will ask the pariticpants to mark which data sources they used in the manual submissions --- you can choose to use all available lableled data, or some of them, but this should be clearly specified in the run submission form.</p>
 <h2 id="example-dialogue-tree"><strong>Example Dialogue Tree</strong></h2>
 <p>An example of two different conversations based on different personas for the same topic is shown in the following figure. For each user turn, systems should return a ranked list of text responses. Each response has one or more (ranked) source passages as provenance. In addition, the systems should provide a sorted list of relevant statements of PTKB with the corresponding relevance score.</p>
 <p><img alt="Picture depicting a conversation tree" src="../conversation-tree.jpg" /></p>
