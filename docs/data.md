@@ -8,6 +8,7 @@
 | 	[2023_train_topics_psg_text.jsonl](https://drive.google.com/file/d/1Bk90f0Rd982Px65GDuQayd5s8uXQs9UX/view?usp=sharing)       |       Text of provenance passages in the train topics.             |
 | 	[2023_test_topics.json](https://drive.google.com/file/d/1zPSiAqLmbx9QFGm6walnuMUl7xoJmRB7/view?usp=sharing)       |       Test topics in JSON format.             |
 | 	[2023_test_topics_psg_text.jsonl](https://drive.google.com/file/d/1YGhJAUEw9PPITPkrWP3EtnUsWiboh3eq/view?usp=sharing)       |       Text of provenance passages in the test topics.             |
+| 	[2023_top_1000_query_results.zip](https://drive.google.com/file/d/1csWaKo0WxZVACrMazlJLcW2Xy1msp9ec/view?usp=sharing)       |       This zip file has queries from both training and testing topics, saved in `queries_train.txt` and `queries_test.txt` respectively. The results from the [iKAT searcher](https://ikat-searcher.grill.science/) are saved in the `query_results_train` and `query_results_test` folders. Each result file, with up to 1000 results, corresponds to a query based on line numbers, starting from zero. For instance, the results for the first query in `queries_train.txt` can be found in `query_results_train/query_results_000.txt`. In each result file, every line shows the `ClueWeb22 ID` followed by the `URL`.            |
 
 ## :boom: **Collection: TREC iKAT 2023 ClueWeb22-B**
 
@@ -53,6 +54,10 @@ We provide the following additional resources for the teams:
 
 - Currently, these teams can access this URL: `MLIA`,  `TREMA_UNH` and `Nota` . Please send us a message privately via slack or through the email and we will share the login details with you.
 - Other teams: You have shared IPs in the `10.x.x.x` range which is for private networks, so we need another IP from you. Can you please share another suitable IP with us so that we may configure the above download link to work for you?
+
+## **iKAT Searcher**
+
+iKAT Searcher is a simple tool developed to help with creating the topics for iKAT. The tool allows topic developers to visually assess the behaviour of a retrieval system, ultimately making it easier to develop challenging, but interesting, topics for the Track. You can interact with the system [here](https://ikat-searcher.grill.science/). See the [GitHub repository](https://github.com/andrewramsay/Interactive-CAsT/tree/deployment_testing).
 
 
 

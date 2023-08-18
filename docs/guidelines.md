@@ -40,9 +40,18 @@ We plan on providing baseline ranking and response generation methods. 
 
 ### **Submission Classes**
 
--   Automatic: These use raw utterances (with automatic rewrite/expansion) methods.
+There are two submission classes:
 
--   Manual: These use the manual human rewritten queries.
+-   Automatic: No manually labeled data can be used for this run type. This means that the models should solely rely on the current utterance, and the converation context (i.e., previous user utterance and system’s canonical responses).
+
+-   Manual: The manual runs can use the manually annotated data in the models. This includes the following: 
+	1. The manual rewritten utterance of the current utterance
+	2. The ground-truth relevant PTKB statements (`ptkb_provenance`) of the current utterance
+	3. The ground-truth relevant PTKB statements (`ptkb_provenance`) of previous turns.
+	
+**Note.** In either run type, the **participants are not allowed to use any information from the future**. In other words, you should assume that for each turn, the only available information is up and including the current user utterance -- the system reponse of the current turn, as well as anything beyond that are hidden.
+
+In the submission form, we will ask the pariticpants to mark which data sources they used in the manual submissions --- you can choose to use all available lableled data, or some of them, but this should be clearly specified in the run submission form.
 
 ## **Example Dialogue Tree**
 
