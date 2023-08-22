@@ -1,0 +1,1192 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.ikat.com/demo/">
+      
+      
+        <link rel="prev" href="../guidelines/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Getting Started - TREC Interactive Knowledge Assistance Track (iKAT)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-C0EGN6D7BM"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-C0EGN6D7BM",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-C0EGN6D7BM",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trec-ikat-2023-getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TREC Interactive Knowledge Assistance Track (iKAT)" class="md-header__button md-logo" aria-label="TREC Interactive Knowledge Assistance Track (iKAT)" data-md-component="logo">
+      
+  <img src="../logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TREC Interactive Knowledge Assistance Track (iKAT)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TREC Interactive Knowledge Assistance Track (iKAT)" class="md-nav__button md-logo" aria-label="TREC Interactive Knowledge Assistance Track (iKAT)" data-md-component="logo">
+      
+  <img src="../logo.jpg" alt="logo">
+
+    </a>
+    TREC Interactive Knowledge Assistance Track (iKAT)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Datasets and Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/" class="md-nav__link">
+        Guidelines
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Getting Started
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    System Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trec-ikat-2023-simple-english-wikipedia-passage-collection" class="md-nav__link">
+    TREC iKAT 2023 Simple English Wikipedia Passage Collection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-bm25-index" class="md-nav__link">
+    Creating a BM25 Index
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-rewriting" class="md-nav__link">
+    Query Rewriting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expanding-the-context-using-relevant-ptkb-statements" class="md-nav__link">
+    Expanding the Context using Relevant PTKB Statements
+  </a>
+  
+    <nav class="md-nav" aria-label="Expanding the Context using Relevant PTKB Statements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question-1-what-are-the-relevant-ptkb-statements-for-the-current-turn" class="md-nav__link">
+    Question 1: What are the relevant PTKB statements for the current turn?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-2-how-do-we-use-these-relevant-ptkb-statements" class="md-nav__link">
+    Question 2: How do we use these relevant PTKB statements?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passage-retrieval-and-reranking" class="md-nav__link">
+    Passage Retrieval and Reranking
+  </a>
+  
+    <nav class="md-nav" aria-label="Passage Retrieval and Reranking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-retrieval-using-bm25" class="md-nav__link">
+    Step-1: Retrieval using BM25
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-rerank-using-crossencoder" class="md-nav__link">
+    Step-2: Rerank using CrossEncoder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-generation" class="md-nav__link">
+    Response Generation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    System Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trec-ikat-2023-simple-english-wikipedia-passage-collection" class="md-nav__link">
+    TREC iKAT 2023 Simple English Wikipedia Passage Collection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-bm25-index" class="md-nav__link">
+    Creating a BM25 Index
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-rewriting" class="md-nav__link">
+    Query Rewriting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expanding-the-context-using-relevant-ptkb-statements" class="md-nav__link">
+    Expanding the Context using Relevant PTKB Statements
+  </a>
+  
+    <nav class="md-nav" aria-label="Expanding the Context using Relevant PTKB Statements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question-1-what-are-the-relevant-ptkb-statements-for-the-current-turn" class="md-nav__link">
+    Question 1: What are the relevant PTKB statements for the current turn?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-2-how-do-we-use-these-relevant-ptkb-statements" class="md-nav__link">
+    Question 2: How do we use these relevant PTKB statements?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passage-retrieval-and-reranking" class="md-nav__link">
+    Passage Retrieval and Reranking
+  </a>
+  
+    <nav class="md-nav" aria-label="Passage Retrieval and Reranking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-retrieval-using-bm25" class="md-nav__link">
+    Step-1: Retrieval using BM25
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-rerank-using-crossencoder" class="md-nav__link">
+    Step-2: Rerank using CrossEncoder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-generation" class="md-nav__link">
+    Response Generation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="trec-ikat-2023-getting-started"><strong>TREC iKAT 2023: Getting Started</strong></h1>
+<p><a href="https://colab.research.google.com/drive/1MOKGQZxjDhREX6d-m68om9mzTmHbwLsa?usp=sharing"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<hr />
+<h2 id="objective"><strong>Objective</strong></h2>
+<p>To help you get started, we (the iKAT organizers) have put together this guide. In this demo, we'll explore and build the components of a simple iKAT system. These components include:</p>
+<ul>
+<li>Query Rewriter</li>
+<li>Passage Retriever, and</li>
+<li>Response Generator</li>
+</ul>
+<h2 id="system-architecture"><strong>System Architecture</strong></h2>
+<p><center>
+<img src="https://drive.google.com/uc?export=view&id=1iYVORhPemdFd6yR2S_0EP2L8l0K_nBP3
+" width="85%"/>
+</center></p>
+<p>The diagram above shows how the components of our system interact.</p>
+<p>Given a query, conversation context, and the PTKB of the user, our system's <strong>Query Rewriter</strong> reformulates the query to resolve ambiguity. Next, the <strong>Passage Retriever</strong> uses the reformulated query to retrieve the top-K candidate passages from an index. Finally, the <strong>Response Generator</strong> uses the top-N of the K retrieved passages to generate a coherant response. The output of our system is a response along with the provenance relevant passages used to construct the response for the input query, based on the conversation context.</p>
+<h2 id="setup"><strong>Setup</strong></h2>
+<p>Before putting our system together, let's download the topics and the demo collection.</p>
+<h3 id="trec-ikat-2023-simple-english-wikipedia-passage-collection"><strong>TREC iKAT 2023 Simple English Wikipedia Passage Collection</strong></h3>
+<p>Downloading and processing the entire TREC iKAT 2023 ClueWeb22-B passage collection is not possible on Colab. Moreover, it requires a licenece to use. For this demo, we will use <a href="https://simple.wikipedia.org/wiki/Main_Page">Simple English Wikipedia</a>. Compared to the full English wikipedia, it has only about 170k articles. The iKAT organizers have preprocessed the articles and created a passage collection for you to use. This collection is in a <code>jsonl</code> format. An example record from the collection is shown below:</p>
+<pre><code>{
+    &quot;id&quot;: &quot;simplewiki:Ted%20Cassidy:0&quot;,
+    &quot;contents&quot;: &quot;Ted Cassidy (July 31, 1932 - January 16, 1979) was an American actor. He was best known for his roles as Lurch and Thing on \&quot;The Addams Family\&quot;.&quot;,
+    &quot;title&quot;: &quot;Ted Cassidy&quot;,
+    &quot;wiki_id&quot;: &quot;9822&quot;
+}
+</code></pre>
+<p>Each record in this collection contains the following fields:</p>
+<ol>
+<li><code>id</code>: The passage id is a combination of (1) the string "simplewiki:", (2) the encoded title of the Wikipedia page, and (3) the passage number. This is similar to the iKAT 2023 passage id format (<strong><em>doc_id:passage_number</em></strong>) </li>
+<li><code>contents</code>: The text of the passage.</li>
+<li><code>title</code>: The title of the Wikipedia page to which this passage belongs.</li>
+<li><code>wiki_id</code>: The Wikipedia page ID of the Wikipedia page to which this passage belongs. These IDs are unique and will never change</li>
+</ol>
+<blockquote>
+<p><strong>Note.</strong> As this collection is a toy collection meant for demo purposes, the quality of results we obtain in this tutorial may be affected.</p>
+</blockquote>
+<pre><code class="language-python">!pip install gdown
+</code></pre>
+<pre><code class="language-python">!echo &quot;Creating target directory..&quot;
+!mkdir -p ikat_demo
+!mkdir -p ikat_demo/collection
+
+import gdown
+# The Google Drive file ID and the destination path
+url = 'https://drive.google.com/uc?id=1touBjwkPByH69utT9_sevr5nYT0TTZ2M'
+output = '/content/ikat_demo/collection/simplewiki-2020-11-01.passages.jsonl'
+gdown.download(url, output, quiet=False)
+
+url = 'https://drive.google.com/uc?id=1zPSiAqLmbx9QFGm6walnuMUl7xoJmRB7'
+output = '/content/ikat_demo/test.json'
+gdown.download(url, output, quiet=False)
+</code></pre>
+<h2 id="creating-a-bm25-index"><strong>Creating a BM25 Index</strong></h2>
+<p>Now, we'll use the <a href="https://github.com/castorini/pyserini">Pyserini information retrieval toolkit</a> to build a sparse index for the collection we just downloaded. Pyserini provides APIs for our indexing needs and supports both sparse and dense retrieval. Alternatively, you may also use <a href="https://github.com/terrier-org/pyterrier">PyTerrier</a>.</p>
+<p>First, let's install Pyserini and its dependcies.</p>
+<pre><code class="language-python">!pip install pyserini
+!pip install faiss-cpu
+</code></pre>
+<p>Pyserini provides ingestors for document collections in many different formats. The simplest, however, is the following JSON format:</p>
+<pre><code>{
+  &quot;id&quot;: &quot;doc1&quot;,
+  &quot;contents&quot;: &quot;this is the contents.&quot;
+}
+</code></pre>
+<p>The collection to be used with Pyserini must be in a <code>jsonl</code> format, where each line is a <code>json</code> record structured as above.
+The preprocessed collection that we provide is already in a <code>jsonl</code> format.</p>
+<pre><code class="language-python">!python -m pyserini.index.lucene \
+  --collection JsonCollection \
+  --input  '/content/ikat_demo/collection/' \
+  --index '/content/ikat_demo/index' \
+  --generator DefaultLuceneDocumentGenerator \
+  --threads 8 \
+  --storePositions --storeDocvectors --storeRaw
+</code></pre>
+<p>To check that our new sparse index works, let's try searching with it. The code below loads the index and searches for the query <code>global warming</code>.</p>
+<pre><code class="language-python">from pyserini.search.lucene import LuceneSearcher
+
+searcher = LuceneSearcher('ikat_demo/index')
+query = 'global warming'
+hits = searcher.search(query)
+
+for i in range(len(hits)):
+    print(f'{i+1:2} {hits[i].docid:4} {hits[i].score:.5f}')
+</code></pre>
+<p>Let's see the contents of the best ranking document.</p>
+<pre><code class="language-python">import json
+best_ranked_doc = searcher.doc(hits[0].docid)
+parsed_doc = json.loads(best_ranked_doc.raw())
+parsed_doc['contents']
+</code></pre>
+<h2 id="query-rewriting"><strong>Query Rewriting</strong></h2>
+<p>iKAT topics mimic real-world dialogue phenomena. As a result, utterances within topics become increasingly ambiguous as the topic unfolds. On their own, these utterances likely won't return good candidates from our index, so we need to reformulate them using information from prior turns in the topic.</p>
+<p>Let's examine the utterances in a topic to demonstrate the need for query rewriting. As an example, we will examine a segment from the iKAT 2023 test topic on "Finding a diet" conversation.</p>
+<pre><code>{
+    &quot;turn_id&quot;: 1,
+    &quot;utterance&quot;: &quot;Hey, Assistant! I am wondering what to cook for dinner tonight for my family.&quot;,
+    &quot;resolved_utterance&quot;: &quot;Hey, Assistant! I am wondering what to cook for dinner tonight for my family.&quot;,
+    &quot;response&quot;: &quot;Hey there! There are many healthy and delicious recipes you could try! For example, a stir-fry with lean proteins like chicken or tofu and a variety of colorful vegetables is always a good option. Or you could try making a Mediterranean quinoa salad with cucumbers, tomatoes, feta cheese, and a light lemon vinaigrette. Baked salmon with a side of roasted vegetables is also a great choice.&quot;,
+},
+{
+    &quot;turn_id&quot;: 2,
+    &quot;utterance&quot;: &quot;Nah, we had salmon just two days ago. But the Mediterranean dish that you mentioned sounds interesting, could you provide the recipe for that?&quot;,
+    &quot;resolved_utterance&quot;: &quot;Nah, we had salmon just two days ago. But the Mediterranean quinoa salad sounds interesting, can you provide the recipe for the Mediterranean quinoa salad?&quot;,
+    &quot;response&quot;: &quot;Ah, I see. Of course! Here's a simple recipe for Mediterranean Quinoa Salad. The ingredients you need are 1 cup quinoa, 2 cups water, 1/4 cup extra-virgin olive oil, 2 limes, juiced, 2 teaspoons ground cumin, 1 teaspoon salt, 1/2 teaspoon red pepper flakes (optional), 1 1/2 cups halved cherry tomatoes, 1 cucumber, diced, 1/2 cup chopped fresh mint, 1/2 cup feta cheese. Instructions: Bring quinoa and water to a boil in a saucepan. Reduce heat to medium-low, cover, and simmer until quinoa is tender and water has been absorbed, 10 to 15 minutes. Set aside to cool. In a large bowl, whisk olive oil, lime juice, cumin, salt, and red pepper flakes together to create the dressing. In the bowl with the dressing, mix in quinoa, tomatoes, cucumber, and mint. Stir until well mixed. Top with feta cheese before serving. Enjoy!&quot;
+},
+{
+    &quot;turn_id&quot;: 3,
+    &quot;utterance&quot;: &quot;That's great, thanks! But I'm thinking of reducing the amount of oil in the dressing. Any suggestions?&quot;,
+    &quot;resolved_utterance&quot;: &quot;That's great, thanks! But I'm thinking of reducing the amount of oil in the salad dressing. Any suggestions?&quot;,
+    &quot;response&quot;: &quot;Certainly! You can reduce the amount of oil by using more lime juice or adding some water. Alternatively, you could substitute some of the oil with a different kind of liquid like vinegar. This should maintain a good balance between tartness and the need for oil as an emulsifier. Which of these do you think works the best for you?&quot;
+},
+{
+    &quot;turn_id&quot;: 4,
+    &quot;utterance&quot;: &quot;Thanks! My children don't like vinegar, so I would probably go with lime juice. Can I also use butter instead?&quot;,
+    &quot;resolved_utterance&quot;: &quot;Thanks! My children don't like vinegar, so I would probably go with lime juice. Can I also butter instead of oil in the Mediterranean Quinoa Salad?&quot;,
+    &quot;response&quot;: &quot;Butter can be substituted for vegetable oil in some dishes, but not always. Butter is a solid fat, while vegetable oil is liquid, so they have different effects on the consistency and texture of the food. Butter is also higher in calories and lower in trans fats than vegetable oil. If you want to use butter instead of vegetable oil, you may need to adjust the quantity, melt it down, and let it cool a bit. For example, 1 cup of butter equals 7/8 cup of vegetable oil.&quot;
+},
+{
+    &quot;turn_id&quot;: 5,
+    &quot;utterance&quot;: &quot;I see, thanks! What are some cheese substitutes?&quot;,
+    &quot;resolved_utterance&quot;: &quot;I see, thanks! What are some substitutes for cheese in the Mediterranean Quinoa Salad?&quot;,
+    &quot;response&quot;: &quot;I can suggest some alternatives for feta cheese. One option is to use a lower fat cheese like mozzarella. Another is to use a plant-based cheese substitute, if you're open to vegan options. You could also try adding a bit of nutritional yeast for a cheese-like flavor with less fat and more protein.&quot;
+},
+{
+    &quot;turn_id&quot;: 6,
+    &quot;utterance&quot;: &quot;Can you compare the first two?&quot;,
+    &quot;resolved_utterance&quot;: &quot;Can you compare mozzarella with plant-based cheese?&quot;,
+    &quot;response&quot;: &quot;Mozzarella cheese is a dairy product derived from milk and produced in a wide range of flavors. It comprises fat, usually from the milk of cows, buffalo, goats, or sheep. On the other hand, vegan cheese is a non-dairy, plant-based product. Vegan cheese is 100 percent animal-free cheese and is made using vegetable proteins. The ingredients of vegan cheese include soy, nuts, cashews, and vegetable oils (such as coconut oil). Vegan cheese is made using a process similar to traditional cheese making-without the animal milk. During the process, the plant proteins are separated using bacteria. Then the ingredients, such as oils and thickeners, are added to achieve the desired cheese-like consistency.&quot;
+},
+{
+    &quot;turn_id&quot;: 7,
+    &quot;utterance&quot;: &quot;Which of these is suitable for me?&quot;,
+    &quot;resolved_utterance&quot;: &quot;Which of mozzarella and vegan cheese is suitable for me?&quot;,
+    &quot;response&quot;: &quot;Based on the nutritional facts, mozzarella can be considered safe for lactose-intolerant people to eat, but be aware that the type of mozzarella you buy may not help reduce your symptoms. This is because many types of processed and packaged mozzarella also contain whey powder or casein - two other forms of dairy which are high in lactose. However, mozzarella has almost no lactose. Just one ounce of cheese provides around 0.3 grams of lactose. Vegan cheese is also a good alternative for lactose-intolerant people. Vegan cheeses are 100 percent animal-free and made using vegetable proteins. There are many different types of vegan cheese available, including vegan mozzarella. So, both mozzarella and vegan cheese can be suitable for lactose-intolerant people. It depends on your personal preference and dietary needs.&quot;
+},
+</code></pre>
+<p>This topic starts with a question regarding selecting a diet. If we isolate <code>Turn 6</code> from the rest of the conversation and use it for search, we would likely get minimal, if any, results.</p>
+<p>Now, let's see how a query rewriter helps.</p>
+<p>We'll use a <a href="https://huggingface.co/castorini/t5-base-canard"><code>T5</code> query rewriter from <code>HuggingFace</code></a>. It is finetuned on the <a href="https://sites.google.com/view/qanta/projects/canard"><code>CANARD</code> dataset</a> but works effectively on iKAT queries.</p>
+<pre><code class="language-python"># Load model and tokenizer from HuggingFace
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import torch
+
+device = &quot;cuda&quot; if torch.cuda.is_available() else &quot;cpu&quot;
+rewriter = AutoModelForSeq2SeqLM.from_pretrained(&quot;castorini/t5-base-canard&quot;).to(device).eval()
+rewriter_tokenizer = AutoTokenizer.from_pretrained(&quot;castorini/t5-base-canard&quot;)
+</code></pre>
+<p>The model rewrites an utterance using that utterance and all previous utterances and system responses as input. The utterance and previous turn utterances and system responses should be separated by <code>|||</code> when building the input to the model.</p>
+<p>Let's read the <code>json</code> data file and load the turns.</p>
+<pre><code class="language-python">with open('/content/ikat_demo/test.json', 'r') as f:
+    topics = json.load(f)
+</code></pre>
+<p>Next, we write a small function to extract the context.</p>
+<p>The provided Python function, <code>extract_context</code>, extracts a sequence of utterances and responses up to a given <code>turn_id</code> from a JSON data structure. Here's a breakdown:</p>
+<ol>
+<li>
+<p><strong>Purpose:</strong> Extracts a series of utterances and responses up to a specified turn from a given JSON data based on the provided <code>number</code>.</p>
+</li>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>json_data</code>: A list of dictionaries, where each dictionary represents a conversation that has a unique number and contains a series of turns.</li>
+<li><code>number</code>: The unique identifier for a specific conversation in the JSON data.</li>
+<li><code>turn_id</code>: A specified turn up to which the utterances and responses will be extracted.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process:</strong></p>
+<p>a. <strong>Locate Conversation:</strong> Loops through the <code>json_data</code> to find the dictionary with the given <code>number</code>.</p>
+<p>b. <strong>Error Handling:</strong> If no dictionary with the given <code>number</code> is found, it returns a message indicating so.</p>
+<p>c. <strong>Extracting Text:</strong> Loops through the turns within the found conversation and appends the utterances and responses up to the <code>turn_id</code> to a list.</p>
+<p>d. <strong>Context Formation:</strong> Concatenates the extracted utterances and responses using "|||" as a separator to form the context.</p>
+</li>
+<li>
+<p><strong>Output:</strong> A tuple containing:</p>
+<ul>
+<li>The current <code>utterance</code> for the provided <code>turn_id</code>.</li>
+<li>The <code>context</code>, which is the sequence of utterances and responses up to the given <code>turn_id</code>, concatenated with "|||".</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-python">def extract_context(json_data, number, turn_id):
+    # Find the correct dictionary with the given number
+    data = None
+    for item in json_data:
+        if item['number'] == number:
+            data = item
+            break
+
+    # If we couldn't find the data for the given number
+    if not data:
+      print(&quot;No data found for the given number.&quot;)
+      return &quot;No data found for the given number.&quot;, None
+
+    # Extract the utterance and response values
+    texts = []
+    current_utterance = &quot;&quot;
+    for turn in data['turns']:
+        if turn['turn_id'] &lt; turn_id:
+            texts.append(turn['utterance'])
+            texts.append(turn['response'])
+        elif turn['turn_id'] == turn_id:
+            current_utterance = turn['utterance']
+            texts.append(current_utterance)
+
+    # Join the texts with &quot;|||&quot; separator
+    context = '|||'.join(texts)
+
+    return current_utterance, context
+</code></pre>
+<p>Now we can use this function to extract the context for a given topic <code>number</code> and <code>turn_id</code> in the topic.</p>
+<pre><code class="language-python">number_to_search = &quot;10-1&quot;
+turn_id_to_search = 6
+utterance, context = extract_context(topics, number_to_search, turn_id_to_search)
+print(f&quot;Raw Utterance: {utterance}&quot;)
+print(f&quot;Turn Context: {context}&quot;)
+</code></pre>
+<blockquote>
+<p><strong>NOTE:</strong> When building context this way, there's a risk that the input can become too lengthy for subsequent interactions, especially in extended discussions. For handling this, you can experiment with various context truncation methods. A straightforward strategy is to eliminate earlier turn utterances and responses if the input size surpasses the model's token limit.</p>
+</blockquote>
+<p>Now, let's rewrite the query using our model.</p>
+<pre><code class="language-python">def rewrite_query(context: str, model, tokenizer, device) -&gt; str:
+  tokenized_context = tokenizer.encode(context, return_tensors=&quot;pt&quot;).to(device)
+  output_ids = model.generate(
+      tokenized_context,
+      max_length=200,
+      num_beams=4,
+      repetition_penalty=2.5,
+      length_penalty=1.0,
+      early_stopping=True
+  ).to(device)
+
+  rewrite = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+  return rewrite
+</code></pre>
+<pre><code class="language-python">rewrite = rewrite_query(context, rewriter, rewriter_tokenizer, device)
+print(f&quot;Raw Utterance: {utterance}&quot;)
+print(f&quot;Query Rewrite: {rewrite}&quot;)
+</code></pre>
+<p>Hmm, that didn't really help! 😞 The rewriter did expand the query but with the wrong information!</p>
+<h2 id="expanding-the-context-using-relevant-ptkb-statements"><strong>Expanding the Context using Relevant PTKB Statements</strong></h2>
+<p>One major difference between iKAT and CAsT is the presence of the Personal Text Knowledge Base (PTKB). In the first year, we are providing the PTKB as a dictionary of statements about the user. Each PTKB defines a user's profile and controls how the system should respond to the user. For the example conversation above, the PTKB, as provided in the test data, is as below.</p>
+<pre><code>{
+    &quot;1&quot;: &quot;I want to know about healthy cooking techniques.&quot;,
+    &quot;2&quot;: &quot;I am lactose intolerant.&quot;,
+    &quot;3&quot;: &quot;I'm looking for a speaker set to match my TV.&quot;,
+    &quot;4&quot;: &quot;I'm willing to drive a long distance to find a cheaper TV.&quot;,
+    &quot;5&quot;: &quot;I'm hoping to find some offers and discounts for TV.&quot;,
+    &quot;6&quot;: &quot;I like to eat fruits and vegetables.&quot;,
+    &quot;7&quot;: &quot;I don't read much.&quot;,
+    &quot;8&quot;: &quot;I want to cook healthy and tasty recipes for my family.&quot;,
+    &quot;9&quot;: &quot;I am on a diet and prefer low-calorie food.&quot;,
+    &quot;10&quot;: &quot;I want to know about the nutritional value of the ingredients I use.&quot;,
+    &quot;11&quot;: &quot;I'm looking for a new TV to replace my current one.&quot;,
+    &quot;12&quot;: &quot;I want a TV that is okay for light and size of my living room.&quot;
+},
+</code></pre>
+<p>Above, we re-wrote the query using the context. But for a more persoanlized conversation, one approach to query rewriting could be to use the PTKB statements in the query reformulation process.</p>
+<p>To incorporate the PTKB into the system, we must answer two questions:</p>
+<ol>
+<li>What are the relevant PTKB statements for the current turn?</li>
+<li>How do we use these relevant PTKB statements?</li>
+</ol>
+<h3 id="question-1-what-are-the-relevant-ptkb-statements-for-the-current-turn"><strong>Question 1: What are the relevant PTKB statements for the current turn?</strong></h3>
+<p>In a <code>manual</code> run, you may use the <code>ptkb_provenance</code> fields. This field was manually populated by the iKAT topic developers and provides a straightforward way to identify relevant PTKB statements for the given turn utterance. However, a more difficult (and perhaps interesting) exercise is to automatically identify relevant PTKB statements for the given turn.</p>
+<p>One easy-to-implement (and probably good) solution is to use <code>BERT</code> embeddings. Specifially, we can use <code>SentenceTransformers</code></p>
+<p><a href="https://www.sbert.net/index.html"><code>SentenceTransformers</code></a> is a Python framework designed for sentence, text, and image embeddings. the foundational work on this was presented in the paper titled <a href="https://arxiv.org/abs/1908.10084">Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks</a>.</p>
+<p>This tool enables computation of sentence and text embeddings in over 100 languages. You can then use cosine similarity, for instance, to identify sentences of similar meanings. It's particularly valuable for semantic text similarity, semantic searching, and paraphrase detection.</p>
+<p>Built on <a href="https://pytorch.org/">PyTorch</a> and <a href="https://huggingface.co/docs/transformers/index">Transformers</a>, the framework boasts a vast array of pre-trained models optimized for diverse tasks. Moreover, fine-tuning your models is a breeze.</p>
+<p>We are going to use the <code>CrossEncoder</code> model from <code>SentenceTransformers</code> to identify the relevant PTKB statements. Specifically, we are going to <strong>re-rank</strong> the PTKB statements based on the current utterance.</p>
+<p>A <code>CrossEncoder</code>-based re-ranker can significantly enhance the end results for users. In this approach, both the query and a potential document are fed into the transformer network concurrently. The network then produces a score between 0 and 1, signifying the document's relevance to the query.</p>
+<p>The strength of a <code>CrossEncoder</code> lies in its superior performance, stemming from its ability to execute attention operations across both the query and the document.</p>
+<p>We will use <a href="https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2"><code>cross-encoder/ms-marco-MiniLM-L-6-v2</code></a> model from HuggingFace that scores the query and all retrieved passages for their relevancy.</p>
+<p>For a complete introduction to using cross encoders and retrieval and reranking, <a href="https://github.com/UKPLab/sentence-transformers/blob/master/examples/applications/retrieve_rerank/retrieve_rerank_simple_wikipedia.ipynb">see this notebook</a>.</p>
+<p>First, we need to install the <code>SentenceTransformers</code> library</p>
+<pre><code class="language-python">!pip install sentence-transformers
+</code></pre>
+<p>Next, we write a small function that will rerank the PTKB statements for the given query.</p>
+<p>The provided Python function, <code>get_ptkb_statements</code>, compares statements from the PTKB with a query to determine their similarity. Here's a step-by-step explanation of the function:</p>
+<ol>
+<li>
+<p><strong>Purpose:</strong> The function aims to return the top <code>num_ptkb</code> statements from the PTKB that are most similar to the given <code>query</code>.</p>
+</li>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code>: The user's input or question.</li>
+<li><code>num_ptkb</code>: The number of PTKB statements to return.</li>
+<li><code>ptkb</code>: A dictionary of the PTKB statements.</li>
+<li><code>reranker</code>: A model that predicts the similarity score between two texts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process:</strong></p>
+<p>a. <strong>Calculate Similarity Scores:</strong> For each statement in the PTKB, it computes a similarity score with the <code>query</code> using the <code>reranker</code>. The score is between 0 and 1, with 1 being highly similar.</p>
+<p>b. <strong>Pair Statements with Scores:</strong> The statements from the PTKB are paired with their respective similarity scores.</p>
+<p>c. <strong>Sort Pairs:</strong> The pairs are then sorted in descending order based on their similarity scores.</p>
+<p>d. <strong>Extract Statements:</strong> From the sorted pairs, the actual statements are extracted.</p>
+<p>e. <strong>Return Top Statements:</strong> The top <code>num_ptkb</code> statements are then concatenated into a single string and returned.</p>
+</li>
+<li>
+<p><strong>Output:</strong> A string containing the top <code>num_ptkb</code> statements from the PTKB that are most similar to the given <code>query</code>, separated by spaces.</p>
+</li>
+</ol>
+<pre><code class="language-python">def get_ptkb_statements(query, num_ptkb, ptkb, reranker):
+    # Find the similarity of PTKB statements with the given query
+    similarity_scores = [reranker.predict([[query, ptkb_statement]])[0] for ptkb_statement in ptkb.values()]
+
+    # Pair each statement with its similarity score
+    statement_score_pairs = list(zip(list(ptkb.values()), similarity_scores))
+
+    # Sort the pairs based on the similarity scores in descending order
+    sorted_pairs = sorted(statement_score_pairs, key=lambda x: x[1], reverse=True)
+
+    # Extract the sorted responses
+    sorted_ptkb_statements = [pair[0] for pair in sorted_pairs]
+
+    # Return required number of PTKB statements
+    return ' '.join(sorted_ptkb_statements[:num_ptkb])
+</code></pre>
+<p>Now, let's use this function to find the top relevant PTKB statements for a given turn.</p>
+<pre><code class="language-python">query = &quot;Can you compare the first two?&quot;
+ptkb = {
+    &quot;1&quot;: &quot;I want to know about healthy cooking techniques.&quot;,
+    &quot;2&quot;: &quot;I am lactose intolerant.&quot;,
+    &quot;3&quot;: &quot;I'm looking for a speaker set to match my TV.&quot;,
+    &quot;4&quot;: &quot;I'm willing to drive a long distance to find a cheaper TV.&quot;,
+    &quot;5&quot;: &quot;I'm hoping to find some offers and discounts for TV.&quot;,
+    &quot;6&quot;: &quot;I like to eat fruits and vegetables.&quot;,
+    &quot;7&quot;: &quot;I don't read much.&quot;,
+    &quot;8&quot;: &quot;I want to cook healthy and tasty recipes for my family.&quot;,
+    &quot;9&quot;: &quot;I am on a diet and prefer low-calorie food.&quot;,
+    &quot;10&quot;: &quot;I want to know about the nutritional value of the ingredients I use.&quot;,
+    &quot;11&quot;: &quot;I'm looking for a new TV to replace my current one.&quot;,
+    &quot;12&quot;: &quot;I want a TV that is okay for light and size of my living room.&quot;
+}
+num_ptkb = 3
+</code></pre>
+<pre><code class="language-python">from sentence_transformers import CrossEncoder
+reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+ptkb_statements = get_ptkb_statements(query, num_ptkb, ptkb, reranker)
+ptkb_statements
+</code></pre>
+<h3 id="question-2-how-do-we-use-these-relevant-ptkb-statements"><strong>Question 2: How do we use these relevant PTKB statements?</strong></h3>
+<p>One possible way of using these relevant PTKB statements is to include them in the context when re-writing the query.</p>
+<p>Let's see how that works. We will modify out previous function <code>extract_context</code> a little to include the relevant PTKB statements.</p>
+<pre><code class="language-python">def extract_context_with_ptkb_statements(json_data, number, turn_id, ptkb_statements):
+    # Find the correct dictionary with the given number
+    data = None
+    for item in json_data:
+        if item['number'] == number:
+            data = item
+            break
+
+    # If we couldn't find the data for the given number
+    if not data:
+        print(&quot;No data found for the given number.&quot;)
+        return &quot;No data found for the given number.&quot;
+
+    # Extract the utterance and response values
+    texts = [ptkb_statements]
+    current_utterance = &quot;&quot;
+    for turn in data['turns']:
+        if turn['turn_id'] &lt; turn_id:
+            texts.append(turn['utterance'])
+            texts.append(turn['response'])
+        elif turn['turn_id'] == turn_id:
+            current_utterance = turn['utterance']
+            texts.append(current_utterance)
+
+    # Join the texts with &quot;|||&quot; separator
+    context = '|||'.join(texts)
+
+    return current_utterance, context
+</code></pre>
+<pre><code class="language-python">number_to_search = &quot;10-1&quot;
+turn_id_to_search = 6
+utterance, context = extract_context_with_ptkb_statements(topics, number_to_search, turn_id_to_search, ptkb_statements)
+print(f&quot;Raw Utterance: {utterance}&quot;)
+print(f&quot;Turn Context: {context}&quot;)
+</code></pre>
+<pre><code class="language-python">rewrite = rewrite_query(context, rewriter, rewriter_tokenizer, device)
+print(f&quot;Query Rewrite: {rewrite}&quot;)
+</code></pre>
+<p>That didn't help either! 😞</p>
+<p>This is a really difficult query for the system! We are excited 🤩 to see how <strong>your</strong> system handles such queries.</p>
+<p>Alternatively, we can also append the PTKB statements to the rewritten query (without PTKB statements).</p>
+<h2 id="passage-retrieval-and-reranking"><strong>Passage Retrieval and Reranking</strong></h2>
+<p>In iKAT 2023, we provide several tasks, <a href="https://www.trecikat.com/guidelines/">see the guidelines</a> section of the webpage for more details.</p>
+<p>One core task in iKAT 2023 involves producing a ranked list of relevant passages corresponding to a specific user utterance. During the <strong><em>Passage Retrieval</em></strong> phase, we employ the rephrased query (either manually or automatically adjusted) to fetch a potential set of passages from the previously generated sparse index.</p>
+<p>The <em>retrieve-then-rerank</em> approach is a widely adopted strategy in Information Retrieval systems, aimed at enhancing the quality of the preliminary set of candidates. The process commences with a swift and effective retrieval method to fetch the initial set of passages. One prevalent method for this is BM25. However, there's also the option of adopting dense retrieval methods like Bi-encoders. For a comprehensive understanding of utilizing bi-encoders in retrieval, consider checking <a href="https://www.sbert.net/examples/applications/retrieve_rerank/README.html">this guide</a>.</p>
+<p>Subsequent to this initial retrieval, the candidate set undergoes a reranking process, leveraging more advanced methods. An example would be rerankers rooted in BERT, known as cross-encoders. In this tutorial, we'll specifically employ the <code>CrossEncoder</code> from the <code>SentenceTransformers</code> library.</p>
+<h3 id="step-1-retrieval-using-bm25"><strong>Step-1: Retrieval using BM25</strong></h3>
+<p>We will first retrieve a candidate set of passages from our index using BM25. As query, we will use the manually resolved utterance from <code>turn_id=6</code> in the example shown above.</p>
+<pre><code class="language-python">def retrieve_using_bm25(query):
+    hits = searcher.search(query)
+    candidate_set = []
+    for i in range(len(hits)):
+        print('Rank: {} | PassageID: {} | Score: {}'.format(i+1, hits[i].docid, hits[i].score))
+        doc = searcher.doc(hits[i].docid)
+        parsed_doc = json.loads(doc.raw())
+        print(parsed_doc['contents'])
+        candidate_set.append({
+            'passage_id': hits[i].docid,
+            'bm25_rank': i+1,
+            'bm25_score': hits[i].score,
+            'passage_text': parsed_doc['contents']
+        })
+        print('=================================')
+    return candidate_set
+</code></pre>
+<h3 id="step-2-rerank-using-crossencoder"><strong>Step-2: Rerank using CrossEncoder</strong></h3>
+<p>Next, we will rerank this candidate set using the <code>CrossEncoder</code> defined earlier.</p>
+<pre><code class="language-python">def rerank_passages(query, passages, reranker):
+    res = []
+    query_passage_pairs = [[query, passage['passage_text']] for passage in passages]
+    scores = reranker.predict(query_passage_pairs)
+
+    for passage, score in zip(passages, scores):
+        passage['reranker_score'] = score
+        res.append(passage)
+
+    ranked_passages = sorted(passages, key=lambda x: x['reranker_score'], reverse=True)
+    return ranked_passages
+</code></pre>
+<pre><code class="language-python">query = &quot;Can you compare mozzarella with plant-based cheese?&quot;
+candidate_set = retrieve_using_bm25(query)
+</code></pre>
+<pre><code class="language-python">import numpy as np
+reranked_passages = rerank_passages(query, candidate_set, reranker)
+print(json.dumps(reranked_passages, indent=4, default=lambda o: float(o) if isinstance(o, np.float32) else o))
+</code></pre>
+<p>These results are not great. An important thing to note here is that we are doing retrieval over a very small corpus of <code>SimpleEnglishWikipedia</code>. As mentioned earlier, the results may not be of high quality.</p>
+<h2 id="response-generation"><strong>Response Generation</strong></h2>
+<p>One of the tasks in iKAT 2023 is response generation. After retrieval, the system should use the top-K passages to generate a short response (250 words or less) that is appropriate for an interactive conversational agent to give to the user.</p>
+<p>Let's explore one way this can be done, by framing the task as a summarisation problem. We will use the <code>T5</code> model for this purpose. Specifically, we will use the <code>mrm8488/t5-base-finetuned-summarize-news</code> model from HuggingFace.</p>
+<p>The <a href="https://huggingface.co/mrm8488/t5-base-finetuned-summarize-news"><code>mrm8488/t5-base-finetuned-summarize-news</code></a> is Google's <code>T5-base</code> model fine-tuned on the <a href="https://www.kaggle.com/datasets/sunnysai12345/news-summary">News Summary dataset</a> for the downstream task of summarization.</p>
+<p>First, we will write a short function for this task.</p>
+<p>The <code>generate_response</code> function is described below:</p>
+<ol>
+<li>
+<p><strong>Purpose:</strong> Generates a summarized response based on the top passages from a set of documents returned by a search operation.</p>
+</li>
+<li>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>passages</code>: A set of top documents or hits returned by the search operation.</li>
+<li><code>model</code>: An instance of a pre-trained sequence-to-sequence language model (from the <code>AutoModelForSeq2SeqLM</code> class) for generating summaries.</li>
+<li><code>tokenizer</code>: An instance of a tokenizer (from the <code>AutoTokenizer</code> class) used to tokenize and decode text.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process:</strong></p>
+<p>a. <strong>Consolidating Passages</strong>: Combines all the extracted passages into one continuous string.</p>
+<p>b. <strong>Tokenization and Input Formation</strong>: Tokenizes the combined text and pre-processes it by adding a "summarize: " prefix. The tokenized input is adjusted to not exceed a specified maximum length (512 tokens) and is moved to the desired computation device.</p>
+<p>c. <strong>Generating Summary</strong>: Utilizes the sequence-to-sequence language model to generate a summarized response based on the input. Applies various parameters to control and improve the quality of the output summary.</p>
+<p>d. <strong>Decoding the Summary</strong>: Transforms the token IDs from the generated summary back into human-readable text, ensuring any special tokens are omitted.</p>
+</li>
+<li>
+<p><strong>Output:</strong> Returns a coherent and summarized text derived from the top passages of the documents.</p>
+</li>
+</ol>
+<pre><code class="language-python">def generate_response(passages, model, tokenizer):
+    text = ' '.join(passages)
+    inputs = tokenizer.encode(&quot;summarize: &quot; + text, return_tensors=&quot;pt&quot;, max_length=512, truncation=True)
+    with torch.no_grad():
+        summary_ids = model.generate(
+            inputs,
+            max_length=250,
+            min_length=50,
+            length_penalty=2.0,
+            num_beams=4,
+            early_stopping=True
+        )
+    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    return summary
+</code></pre>
+<pre><code class="language-python">summarizer = AutoModelForSeq2SeqLM.from_pretrained('mrm8488/t5-base-finetuned-summarize-news')
+summarizer_tokenizer = AutoTokenizer.from_pretrained('mrm8488/t5-base-finetuned-summarize-news')
+</code></pre>
+<pre><code class="language-python"># We use the top-3 reranked passages to generate a response
+passages = [passage['passage_text'] for passage in reranked_passages][:3]
+print(json.dumps(passages, indent=4))
+</code></pre>
+<pre><code class="language-python">generate_response(passages, summarizer, summarizer_tokenizer)
+</code></pre>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaceSg5cA0pXtq624Ii7evfz1uRDPyyXR4qclW1dCEMm5-2w/viewform?usp=sf_link" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 TREC iKAT Organizers
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:trec.ikat.ai@gmail.com" target="_blank" rel="noopener" title="Email Us" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/trec_ikat" target="_blank" rel="noopener" title="Follow us on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://trectalk.slack.com/archives/C04QPBXNL01" target="_blank" rel="noopener" title="Join the slack channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="trec-ikat@googlegroups.com" target="_blank" rel="noopener" title="Join the Google group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M96 128a128 128 0 1 1 256 0 128 128 0 1 1-256 0zM0 482.3C0 383.8 79.8 304 178.3 304h91.4c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8 2.4-.1 4.7-.2 7.1-.2h61.4c89.1 0 161.3 72.2 161.3 161.3 0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9 19.7-26.6 31.3-59.5 31.3-95.1 0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/irlabamsterdam/iKAT" target="_blank" rel="noopener" title="See the official TREC iKAT repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>
