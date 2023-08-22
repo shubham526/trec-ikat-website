@@ -103,7 +103,7 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 -   Because a response may consider multiple PTKB statements, the score of statements in the provenance list for a response is used to order statements in descending order.
 
--   Irrelevant statements can get the relevance score of '0' or not appear in the list.
+-   Teams may decide to include non-relevant statements with very low scores or just remove them from the ranked list.
 
 ## **Collection**
 
