@@ -2,6 +2,8 @@
 
 The guidelines are also available as a [**Google Doc**](https://docs.google.com/document/d/1dso0VANm5Q08UWt4ppZvzvH6zkpRhfoukwpBgeJNbHE/edit?usp=sharing).
 
+---
+
 ## **Participation**
 
 Participants [must register](https://ir.nist.gov/trecsubmit.open/application.html) to submit. To request a late registration, please email trec@nist.gov requesting a registration key. The dissemination form must be returned to submit runs.
@@ -42,16 +44,24 @@ We plan on providing baseline ranking and response generation methods. 
 
 There are two submission classes:
 
--   Automatic: No manually labeled data can be used for this run type. This means that the models should solely rely on the current utterance, and the converation context (i.e., previous user utterance and system’s canonical responses).
+-   **Automatic:** No manually labeled data can be used for this run type. This means that the models should solely rely on the current utterance, and the converation context (i.e., previous user utterance and system’s canonical responses). Moreover, systems should not use the `ptkb_provenance` fields from the current or previous turns. They should have a module to automatically identify the relevant PTKB statements (for an example, see the `Getting Started` part of the website).
 
--   Manual: The manual runs can use the manually annotated data in the models. This includes the following: 
+-   **Manual:** The manual runs can use the manually annotated data in the models. This includes the following: 
+
 	1. The manual rewritten utterance of the current utterance
 	2. The ground-truth relevant PTKB statements (`ptkb_provenance`) of the current utterance
 	3. The ground-truth relevant PTKB statements (`ptkb_provenance`) of previous turns.
 	
 **Note.** In either run type, the **participants are not allowed to use any information from the future**. In other words, you should assume that for each turn, the only available information is up and including the current user utterance -- the system reponse of the current turn, as well as anything beyond that are hidden.
 
-In the submission form, we will ask the pariticpants to mark which data sources they used in the manual submissions --- you can choose to use all available lableled data, or some of them, but this should be clearly specified in the run submission form.
+In the submission form, we will ask the pariticpants to mark which data sources they used in the manual submissions. You may either use some or all available lableled data, but this should be clearly specified in the run submission form.
+
+### **Important Points Regarding Submissions**
+
+- Title of the topic cannot be used.
+
+- The file `2023_top_1000_query_results.zip` provided on the "Data and Resources" page of this website is based on the manually rewritten queries. Teams may use them in their submission; however, please note that such submissions would be automaitcally considered as `manual`.
+
 
 ## **Example Dialogue Tree**
 

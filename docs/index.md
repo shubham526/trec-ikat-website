@@ -1,6 +1,12 @@
-# **Introduction to TREC Interactive Knowledge Assistance Track**
+# **Home**
 
-*Last updated: August 18, 2023*
+*Last updated: August 22, 2023*    
+
+[:fontawesome-brands-github: See the official TREC iKAT repository for tools and code related to the track](https://github.com/irlabamsterdam/iKAT)
+
+---
+
+## **Introduction to TREC Interactive Knowledge Assistance Track**
 
 Voice-based assistant interactions are now widespread, with a recent [Comscore](https://www.comscore.com/Insights/Blog/Smart-Speaker-Penetration-Hits-20-Percent-of-US-Wi-Fi-Households) report showing that over 20% of homes in America own a smart speaker. Furthermore, the recent announcement of *assistant-enabled smart glasses* from leading tech companies continues this trend towards real-world interaction. However, despite current assistants' ability to perform well-defined simple actions, their ability to support information seeking in conversations continues to be limited.
 
@@ -21,11 +27,11 @@ All data associated with this work is licensed and released under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
-# **Track Coordinators**
+## **Track Coordinators**
 
 **[Mohammad Aliannejadi](https://aliannejadi.com/), University of Amsterdam, The Netherlands.** Dr. Aliannejadi is an Assistant Professor at the IRLab (formerly known as ILPS), the University of Amsterdam in The Netherlands. His research is in modeling user information needs with a focus on recommender systems, unified (meta) search, and conversational systems. 
 
-**[Zahra Abbasiantaeb](https://zahraabbasiantaeb.github.io/), University of Amsterdam, The Netherlands.** Zahra is a first year Ph.D. student at the IRLab supervised by Dr. Aliannejadi. She is working on conversational search and recommendation. Earlier, she has also worked on patent reference mining. Zahra obtained her masters in AI from the Amirkabir University of Technology with a focus on Question Answering systems.
+**[Zahra Abbasiantaeb](https://zahraabbasiantaeb.github.io/), University of Amsterdam, The Netherlands.** Zahra is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi. She is working on conversational search and recommendation. Earlier, she has also worked on patent reference mining. Zahra obtained her masters in AI from the Amirkabir University of Technology with a focus on Question Answering systems.
 
 
 **[Shubham Chatterjee](https://www.dcs.gla.ac.uk/~shubham/), University of Glasgow, Scotland.** Dr. Chatterjee is a Research Associate in the [Glasgow Representation and Information Learning (GRILL) Lab](https://grilllab.ai/), part of the [Glasgow Information Retrieval](https://www.gla.ac.uk/schools/computing/research/researchsections/ida-section/informationretrieval/) group. The goal of his research is to design intelligent search systems which would one day respond to a user's open-ended and complex information needs with a complete answer instead of a ranked list of results.
@@ -35,17 +41,19 @@ All data associated with this work is licensed and released under a
 **[Leif Azzopardi](https://www.strath.ac.uk/staff/azzopardileifdr/), University of Strathclyde, Scotland.** Dr. Azzopardi is an Associate Professor in Artifical Intelligence and Data Science within the Departement of Computer and Information Sciences at the University of Strathclyde. He is the PI for the Interaction Lab (i-lab) which specializes in developing, evaluating and modelling information rich and information intensive applications and agents.
 
 
-# **Contact** 
+## **Contact** 
 - Twitter: [@trec_ikat](https://twitter.com/home)
 - Email: trec.ikat.ai@gmail.com
 - Google Groups: [trec-ikat@googlegroups.com](https://groups.google.com/u/3/g/trec-ikat)
 - Slack: [ikat-2023](https://app.slack.com/client/TEAQCDVSA/C04QPBXNL01)
 
-# **Announcements**
+## **Announcements**
 
-- :boom: <span style="color:red">New! Additional data released for the participants. See the data section.</span>
+- :boom: <span style="color:red">New! Baselines released. Guidelines updated. Demo released.</span>
 
-- New! Train topics released! See the data section of the website.
+- Additional data released for the participants. See the data section.
+
+- Train topics released! See the data section of the website.
 
 - Sample topics released! See the data section of the website. 
 

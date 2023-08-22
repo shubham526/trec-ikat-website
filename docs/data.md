@@ -1,16 +1,48 @@
 # **Datasets and Resources**
+---
 
 ## :boom: **Topics for iKAT Year 1**
 
 |    File      |      Description      |
 |:------------|:---------------------|
 | 	[2023_train_topics.json](https://drive.google.com/file/d/1sNHmVYO9PVG2kFxLscPGhN-uCCUuDAu9/view?usp=sharing)       |       Train topics in JSON format.             |
-| 	[2023_train_topics_psg_text.jsonl](https://drive.google.com/file/d/1Bk90f0Rd982Px65GDuQayd5s8uXQs9UX/view?usp=sharing)       |       Text of provenance passages in the train topics.             |
 | 	[2023_test_topics.json](https://drive.google.com/file/d/1zPSiAqLmbx9QFGm6walnuMUl7xoJmRB7/view?usp=sharing)       |       Test topics in JSON format.             |
-| 	[2023_test_topics_psg_text.jsonl](https://drive.google.com/file/d/1YGhJAUEw9PPITPkrWP3EtnUsWiboh3eq/view?usp=sharing)       |       Text of provenance passages in the test topics.             |
-| 	[2023_top_1000_query_results.zip](https://drive.google.com/file/d/1csWaKo0WxZVACrMazlJLcW2Xy1msp9ec/view?usp=sharing)       |       This zip file has queries from both training and testing topics, saved in `queries_train.txt` and `queries_test.txt` respectively. The results from the [iKAT searcher](https://ikat-searcher.grill.science/) are saved in the `query_results_train` and `query_results_test` folders. Each result file, with up to 1000 results, corresponds to a query based on line numbers, starting from zero. For instance, the results for the first query in `queries_train.txt` can be found in `query_results_train/query_results_000.txt`. In each result file, every line shows the `ClueWeb22 ID` followed by the `URL`.            |
 
-## :boom: **Collection: TREC iKAT 2023 ClueWeb22-B**
+## :boom: **Addtional Data**
+
+|    File      |      Description      |
+|:------------|:---------------------|
+| 	[2023_train_topics_psg_text.jsonl](https://drive.google.com/file/d/1Bk90f0Rd982Px65GDuQayd5s8uXQs9UX/view?usp=sharing)       |       Text of provenance passages in the train topics.             |
+| 	[2023_test_topics_psg_text.jsonl](https://drive.google.com/file/d/1YGhJAUEw9PPITPkrWP3EtnUsWiboh3eq/view?usp=sharing)       |       Text of provenance passages in the test topics.             |
+| 	[2023_top_1000_query_results.zip](https://drive.google.com/file/d/1csWaKo0WxZVACrMazlJLcW2Xy1msp9ec/view?usp=sharing)       |       This zip file has queries from both training and testing topics, saved in `queries_train.txt` and `queries_test.txt` respectively. The results from the [iKAT searcher](https://ikat-searcher.grill.science/) (`BM25` using manually resolved queries) are saved in the `query_results_train` and `query_results_test` folders. Each result file, with up to 1000 results, corresponds to a query based on line numbers, starting from zero. For instance, the results for the first query in `queries_train.txt` can be found in `query_results_train/query_results_000.txt`. In each result file, every line shows the `ClueWeb22 ID` followed by the `URL`.            |
+
+## :boom: **Baseline Runs**
+
+Below, we provide two baseline runs. 
+
+- **Method.**
+	- `BM25+RM3` (Pyserini default) as the initial retrieval (denoted by `ret_bm25_rm3` in the file name) method to retrieve 1000 passages per query (denoted by `k_1000`).
+	- The query in each turn was re-written using: 
+		1. The context, and 
+		2. The top-3 relevant PTKB statements (denoted by `num_ptkb_3` in the file name).
+- **Query re-writing.** In all cases, the re-written query was construted by appending the relevant PTKB statements to the (manually or automatically) resolved query.
+- **Response generation.** A response was generated using the top-3 passages retrieved with the re-written query (denoted by `num_psg_3` in the file name). We use the `T5` model [`mrm8488/t5-base-finetuned-summarize-news`](https://huggingface.co/mrm8488/t5-base-finetuned-summarize-news) available on HuggingFace for this purpose. 
+- **For automatic runs.** 
+	- The relevant PTKB statements were determined automatically by re-ranking the statements using `SentenceTransformers`, specifically, the model [`cross-encoder/ms-marco-MiniLM-L-6-v2`](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2) available on HuggingFace.
+	- The query was re-written automatically using the [`castorini/t5-base-canard`](https://huggingface.co/castorini/t5-base-canard) model available on HuggingFace.
+- **For manual runs.** 
+	- The relevant PTKB statements provided in the `ptkb_provenance` field were used. 
+	- The manually re-written query provided in the `resolved_utterance` field was used.
+
+
+
+|    File      |      Run Type     |
+|:------------|:---------------------|
+| 	[ret_bm25_rm3--type_automatic--num_ptkb_3--k_1000--num_psg_3.official.run.json](https://drive.google.com/file/d/19Jm-fudnw85STr4llgqRU7rwQxxiFnAq/view?usp=sharing)       |       Automatic     |
+| 	[ret_bm25_rm3--type_manual--num_ptkb_3--k_1000--num_psg_3.official.run.json](https://drive.google.com/file/d/1n50dAA5Fy53uoj0WbfDg7WP0Zp1DZhMx/view?usp=sharing)       |      Manual             |
+
+
+## :boom: **Document Collection: TREC iKAT 2023 ClueWeb22-B**
 
 The collection distribution is being handled directly by CMU and not the iKAT organizers. Please follow these steps to get your data license ASAP:
 
@@ -29,44 +61,56 @@ Please give enough time to the CMU licensing office to accept your request. A do
 
 We provide the following additional resources for the teams:
 
-- **Document segments in `JSONL` format.**
+### **TREC iKAT 2023 ClueWeb22-B Passage Collection**
+
+We provide a segmented version of the TREC iKAT 2023 ClueWeb22-B Document collection available from CMU in two formats: `JSONL` and `TrecWeb`. 
+
+In case you have segmented the document collection yourself, you may check whether your segments match ours using the `tsv` file of passage hashes provided. 
+
+- **Passage collection in `JSONL` format.**
 	- These files contain passages in the form `{"id": "[passage id]", "contents": "[passage text]", "url": "[ClueWeb22 document URL]"}`
 	- Passage IDs are structured as: `doc_id:passage_number`
 	- Total download size is approximately 31 GB.
 	- Total number of passages is 116,838,987
-- **Document segments in `TrecWeb` format.**
+- **Passage collection in `TrecWeb` format.**
 	- Format as shown on website.
 	- Total download size is approximately 31 GB
+	
 - **Passage hashes.**
-	- TSV file containing MD5 hashes of passage texts.
+	- `tsv` file containing MD5 hashes of passage texts.
 	- The `.tsv` file has this format: `doc_id   passage_number    passage_MD5`
 	- Total download size is 2.2 GB
-- **Passage index.**
-	- Lucene index generated from the `JSONL` passage files above using Pyserini.
-	- The files form a single `.tar.bz2` archive split into sections for simpler downloading due to the overall size.
-	- To extract the archive, once downloaded, you must combine each of the sections in name order back into a single file:
-	`cat ikat_2023_passage_index.tar.bz2.part* > ikat_203_passage_index.tar.bz2`
-	- Total download size is approximately 150 GB
 	
-**How do I access this data?** Each team should use a URL of `https://ikattrecweb.grill.science/<team_name>` to access the files. The page will ask for a userID and password. Enter the login details which you obtained from the iKAT organizers. You should see a page which lists each type of data and has links to the individual files listed above, along with their checksum files.
+	
+### **Sparse Lucene Passage Index**
+
+We also provide a sparse Lucene index generated from the `JSONL` passage files above using Pyserini. The files form a single `.tar.bz2` archive split into sections for simpler downloading due to the overall size. To extract the archive, once downloaded, you must combine each of the sections in name order back into a single file: 
+
+```bash
+cat ikat_2023_passage_index.tar.bz2.part* > ikat_203_passage_index.tar.bz2
+```
+
+Total download size is approximately 150 GB
+	
+### **How do I access these resources?** 
+
+Each team should use a URL of `https://ikattrecweb.grill.science/<team_name>` to access the files. The page will ask for a userID and password. Enter the login details which you obtained from the iKAT organizers. You should see a page which lists each type of data and has links to the individual files listed above, along with their checksum files.
 
 **NOTE:** 
 
 - Currently, these teams can access this URL: `MLIA`,  `TREMA_UNH` and `Nota` . Please send us a message privately via slack or through the email and we will share the login details with you.
 - Other teams: You have shared IPs in the `10.x.x.x` range which is for private networks, so we need another IP from you. Can you please share another suitable IP with us so that we may configure the above download link to work for you?
 
-## **iKAT Searcher**
+### **iKAT Searcher**
 
 iKAT Searcher is a simple tool developed to help with creating the topics for iKAT. The tool allows topic developers to visually assess the behaviour of a retrieval system, ultimately making it easier to develop challenging, but interesting, topics for the Track. You can interact with the system [here](https://ikat-searcher.grill.science/). See the [GitHub repository](https://github.com/andrewramsay/Interactive-CAsT/tree/deployment_testing).
 
 
 
 ## **Additional Data from TREC CAsT**
-Those who are eager to start developing and experimenting can also use the data from previous years' TREC CAsT. The iKAT topics are going to be similar, with the addition of the Personal Text Knowledge Base. For more information on TREC CAsT, [see the website](https://www.treccast.ai/) and read the overview papers [[2019]](https://arxiv.org/abs/2003.13624) [[2020]](https://scholar.google.com/scholar_url?url=https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/callan/Papers/trec2021-dalton.pdf&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=4712262702816537608&ei=En6IZNaeLcPFmAGMo47oDQ&scisig=AGlGAw9ggvQnzye9tQlrvoob1Js5) [[2021]](https://www.cs.cmu.edu/~callan/Papers/trec22-Jeffrey_Dalton.pdf) [[2022]](https://trec.nist.gov/pubs/trec31/papers/Overview_cast.pdf)
+We provide the data from previous years' TREC CAsT below. The iKAT topics are similar, with the addition of the Personal Text Knowledge Base. For more information on TREC CAsT, [see the website](https://www.treccast.ai/) and read the overview papers [[2019]](https://arxiv.org/abs/2003.13624) [[2020]](https://scholar.google.com/scholar_url?url=https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/callan/Papers/trec2021-dalton.pdf&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=4712262702816537608&ei=En6IZNaeLcPFmAGMo47oDQ&scisig=AGlGAw9ggvQnzye9tQlrvoob1Js5) [[2021]](https://www.cs.cmu.edu/~callan/Papers/trec22-Jeffrey_Dalton.pdf) [[2022]](https://trec.nist.gov/pubs/trec31/papers/Overview_cast.pdf)
 
-**Note.** TREC CAsT did not include a PTKB but you can be creative and modify the data according to your needs. Also, TREC CAsT used different collections (Wikipedia, KILT, MS MARCO, etc.) at different stages. **_iKAT will be using a subset of the recently released ClueWeb22-B_**.
-
-Below, we provide links to the TREC CAsT topics from previous years for participants. 
+**Note.** TREC CAsT did not include a PTKB but you can be creative and modify the data according to your needs. Also, TREC CAsT used different collections (Wikipedia, KILT, MS MARCO, etc.) at different stages. **_iKAT is using a subset of the recently released ClueWeb22-B_**. 
 
 ### **CAsT Year 4 (2022)**
 
