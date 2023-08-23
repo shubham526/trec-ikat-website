@@ -66,6 +66,8 @@ In the submission form, we will ask the pariticpants to mark which data sources 
 
 - Within the `passage_provenance` `list` in the run, each `dict` should have another  field called `used`. This new field will be a `boolean` field indicating whether or not that passage was used to construct the response.  If none of the passages have the `used` field set to `True`, then we will consider the top-5 passages as provenance for that response by default.
 
+- Having a response `text` for every predicted response is mandatory. In case you are submitting a run that does not generate a response, you may leave this field empty or copy the top-1 passage as your response.
+
 - The file `2023_top_1000_query_results.zip` provided on the "Data and Resources" page of this website is based on the manually rewritten queries. Teams may use them in their submission; however, please note that such submissions would be automaitcally considered as `manual`.
 
 
@@ -269,31 +271,31 @@ degrees Celsius) in winter which is suitable for you. The university of Toronto 
               "id": "clueweb22-en0000-94-02275:0",
               "text": "...",
               "score": 0.6,
-              "used": True,
+              "used": true,
             },
             {
               "id": "clueweb22-en0027-06-08704:1",
               "text": "...",
               "score": 0.5,
-              "used": "True,
+              "used": true,
             },
             {
               "id": "clueweb22-en0005-63-12144:0",
               "text": "...",
               "score": 0.4,
-              "used": True,
+              "used": true,
             },
             {
               "id": "clueweb22-en0013-01-17558:1",
               "text": "...",
               "score": 0.38,
-              "used" : False,
+              "used" : false,
             },
             {
               "id": "clueweb22-en0014-39-04143:0",
              "text": "...",
               "score": 0.3,
-              "used": False
+              "used": false
             }
           ]
         }
