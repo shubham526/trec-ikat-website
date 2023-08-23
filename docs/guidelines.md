@@ -60,6 +60,12 @@ In the submission form, we will ask the pariticpants to mark which data sources 
 
 - Title of the topic cannot be used.
 
+- All fields within the run, as shown in the sample on this website, are **mandatory**. You may choose not to submit a PTKB statement ranking; in this case, the `ptkb_provenance` field may be kept empty in the run; however, it **must** be present. 
+
+- The `passage_provenance` field can have up to 1000 passages -- less is ok but not more.
+
+- Within the `passage_provenance` `list` in the run, each `dict` should have another  field called `used`. This new field will be a `boolean` field indicating whether or not that passage was used to construct the response.  If none of the passages have the `used` field set to `True`, then we will consider the top-5 passages as provenance for that response by default.
+
 - The file `2023_top_1000_query_results.zip` provided on the "Data and Resources" page of this website is based on the manually rewritten queries. Teams may use them in their submission; however, please note that such submissions would be automaitcally considered as `manual`.
 
 
@@ -262,27 +268,32 @@ degrees Celsius) in winter which is suitable for you. The university of Toronto 
             {
               "id": "clueweb22-en0000-94-02275:0",
               "text": "...",
-              "score": 0.6
+              "score": 0.6,
+              "used": True,
             },
             {
               "id": "clueweb22-en0027-06-08704:1",
               "text": "...",
-              "score": 0.5
+              "score": 0.5,
+              "used": "True,
             },
             {
               "id": "clueweb22-en0005-63-12144:0",
               "text": "...",
-              "score": 0.4
+              "score": 0.4,
+              "used": True,
             },
             {
               "id": "clueweb22-en0013-01-17558:1",
               "text": "...",
-              "score": 0.38
+              "score": 0.38,
+              "used" : False,
             },
             {
               "id": "clueweb22-en0014-39-04143:0",
              "text": "...",
-              "score": 0.3
+              "score": 0.3,
+              "used": False
             }
           ]
         }
