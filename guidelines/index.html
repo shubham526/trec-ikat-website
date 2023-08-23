@@ -686,6 +686,9 @@
 <p>Within the <code>passage_provenance</code> <code>list</code> in the run, each <code>dict</code> should have another  field called <code>used</code>. This new field will be a <code>boolean</code> field indicating whether or not that passage was used to construct the response.  If none of the passages have the <code>used</code> field set to <code>True</code>, then we will consider the top-5 passages as provenance for that response by default.</p>
 </li>
 <li>
+<p>Having a response <code>text</code> for every predicted response is mandatory. In case you are submitting a run that does not generate a response, you may leave this field empty or copy the top-1 passage as your response.</p>
+</li>
+<li>
 <p>The file <code>2023_top_1000_query_results.zip</code> provided on the "Data and Resources" page of this website is based on the manually rewritten queries. Teams may use them in their submission; however, please note that such submissions would be automaitcally considered as <code>manual</code>.</p>
 </li>
 </ul>
@@ -888,31 +891,31 @@ degrees Celsius) in winter which is suitable for you. The university of Toronto 
               &quot;id&quot;: &quot;clueweb22-en0000-94-02275:0&quot;,
               &quot;text&quot;: &quot;...&quot;,
               &quot;score&quot;: 0.6,
-              &quot;used&quot;: True,
+              &quot;used&quot;: true,
             },
             {
               &quot;id&quot;: &quot;clueweb22-en0027-06-08704:1&quot;,
               &quot;text&quot;: &quot;...&quot;,
               &quot;score&quot;: 0.5,
-              &quot;used&quot;: &quot;True,
+              &quot;used&quot;: true,
             },
             {
               &quot;id&quot;: &quot;clueweb22-en0005-63-12144:0&quot;,
               &quot;text&quot;: &quot;...&quot;,
               &quot;score&quot;: 0.4,
-              &quot;used&quot;: True,
+              &quot;used&quot;: true,
             },
             {
               &quot;id&quot;: &quot;clueweb22-en0013-01-17558:1&quot;,
               &quot;text&quot;: &quot;...&quot;,
               &quot;score&quot;: 0.38,
-              &quot;used&quot; : False,
+              &quot;used&quot; : false,
             },
             {
               &quot;id&quot;: &quot;clueweb22-en0014-39-04143:0&quot;,
              &quot;text&quot;: &quot;...&quot;,
               &quot;score&quot;: 0.3,
-              &quot;used&quot;: False
+              &quot;used&quot;: false
             }
           ]
         }
