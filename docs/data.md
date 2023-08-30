@@ -14,6 +14,7 @@
 |:------------|:---------------------|
 | 	[2023_train_topics_psg_text.jsonl](https://drive.google.com/file/d/1Bk90f0Rd982Px65GDuQayd5s8uXQs9UX/view?usp=sharing)       |       Text of provenance passages in the train topics.             |
 | 	[2023_test_topics_psg_text.jsonl](https://drive.google.com/file/d/1YGhJAUEw9PPITPkrWP3EtnUsWiboh3eq/view?usp=sharing)       |       Text of provenance passages in the test topics.             |
+| 	[2023_passages_hashes.tsv.bz2](https://ikattrecweb.grill.science/ikat_2023_passages_hashes.tsv.bz2)       |  TSV file containing MD5 hashes of passage texts. The `.tsv` file has this format: `doc_id   passage_number    passage_MD5`. Total download size is 2.2GB.           |
 | 	[2023_top_1000_query_results.zip](https://drive.google.com/file/d/1csWaKo0WxZVACrMazlJLcW2Xy1msp9ec/view?usp=sharing)       |       This zip file has queries from both training and testing topics, saved in `queries_train.txt` and `queries_test.txt` respectively. The results from the [iKAT searcher](https://ikat-searcher.grill.science/) (`BM25` using manually resolved queries) are saved in the `query_results_train` and `query_results_test` folders. Each result file, with up to 1000 results, corresponds to a query based on line numbers, starting from zero. For instance, the results for the first query in `queries_train.txt` can be found in `query_results_train/query_results_000.txt`. In each result file, every line shows the `ClueWeb22 ID` followed by the `URL`.            |
 
 ## :boom: **Baseline Runs**
@@ -21,7 +22,7 @@
 Below, we provide two baseline runs. 
 
 - **Method.**
-	- `BM25+RM3` (Pyserini default) as the initial retrieval (denoted by `ret_bm25_rm3` in the file name) method to retrieve 1000 passages per query (denoted by `k_1000`).
+	- `BM25+RM3` (Pyserini default) as the initial retrieval (denoted by `ret_bm25_rm3` in the file name) method to retrieve 100 passages per query (denoted by `k_100`).
 	- The query in each turn was re-written using: 
 		1. The context, and 
 		2. The top-3 relevant PTKB statements (denoted by `num_ptkb_3` in the file name).
@@ -38,8 +39,8 @@ Below, we provide two baseline runs.
 
 |    File      |      Run Type     |
 |:------------|:---------------------|
-| 	[ret_bm25_rm3--type_automatic--num_ptkb_3--k_1000--num_psg_3.official.run.json](https://drive.google.com/file/d/19Jm-fudnw85STr4llgqRU7rwQxxiFnAq/view?usp=sharing)       |       Automatic     |
-| 	[ret_bm25_rm3--type_manual--num_ptkb_3--k_1000--num_psg_3.official.run.json](https://drive.google.com/file/d/1n50dAA5Fy53uoj0WbfDg7WP0Zp1DZhMx/view?usp=sharing)       |      Manual             |
+| 	[ret_bm25_rm3--type_automatic--num_ptkb_3--k_100--num_psg_3.official.run.json](https://drive.google.com/file/d/14MyYzEYI7D5rBIsRjYfokyMU-9MQwm6t/view?usp=sharing)       |       Automatic     |
+| 	[ret_bm25_rm3--type_manual--num_ptkb_3--k_100--num_psg_3.official.run.json](https://drive.google.com/file/d/1fCjGmULmYoWimr5cgbN_suQ3hAN8YVNs/view?usp=sharing)       |      Manual             |
 
 
 ## :boom: **Document Collection: TREC iKAT 2023 ClueWeb22-B**
@@ -104,6 +105,43 @@ Each team should use a URL of `https://ikattrecweb.grill.science/<team_name>` to
 ### **iKAT Searcher**
 
 iKAT Searcher is a simple tool developed to help with creating the topics for iKAT. The tool allows topic developers to visually assess the behaviour of a retrieval system, ultimately making it easier to develop challenging, but interesting, topics for the Track. You can interact with the system [here](https://ikat-searcher.grill.science/). See the [GitHub repository](https://github.com/andrewramsay/Interactive-CAsT/tree/deployment_testing).
+
+### **Run Validation**
+
+We provide code for run validation in our [Github repository](https://github.com/irlabamsterdam/iKAT/tree/main/2023/scripts/run_validation). Please see the associated README file for detailed instructions on how to run the code. It is crucial to validate your submission files before submitting them. The run files that fail the validation phase will be discarded. We advise you to get familiarized with the validation script as soon as possible and let us know if you have any questions or encounter any problems working with it. 
+
+**Note.** You need the MD5 hash file of the passages in the collection to run the validation code. You can download this file from above. 
+
+Below is a summary of the checks that the script performs on a run file.
+
+ * Can the file be parsed as valid JSON?
+ * Can the JSON be parsed into the protocol buffer format defined in `protocol_buffers/run.proto`?
+ * Does the run file have at least one turn? 
+ * Is the `run_name` field non-empty?
+ * Is the `run_type` field non-empty and set to `automatic` or `manual`?
+ * Does the number of turns in the run match the number in the test topics file?
+ * Does the number of turns in each topic in the run match the corresponding number in the test topics file?
+ * For each turn in the run:
+   * Is the turn ID valid and matches an entry in the topics file?
+   * Is any turn ID higher than expected for the selected topic (e.g. turns 1-5 in the topic, but a turn has ID 6 in the run file)?
+   * (optional, enabled by default) Do all the `passage_provenance` passage IDs appear in the collection?
+   * For each response in the turn:
+     * Does it have a rank > 0?
+     * Do the ranks increase with successive responses?
+     * Does the response have a non-empty `text` field?
+     * For each `passage_provenance` entry:
+       * Does it have a score less than the previous entry?
+       * Does it have a passage ID containing a single colon and beginning with 'clueweb22-'?
+     * Are there less than 1000 `passage_provenance` entries listed for the response?
+     * Is there at least one `passage_provenance` with its `used` field set to True in the response?
+     * Does the response have at least one `passage_provenance` entry?
+     * Does the response have at least one `ptkb_provenance` entry?
+     * For each `ptkb_provenance` entry:
+       * Does it have a non-empty ID?
+       * Does the ID appear in the `ptkb` field of the topic data?
+       * Does the text given match that in the topic data?
+       * Does it have a score less than the previous entry?
+
 
 
 
