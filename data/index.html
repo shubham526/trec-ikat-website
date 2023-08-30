@@ -336,6 +336,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#run-validation" class="md-nav__link">
+    Run Validation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -510,6 +517,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#run-validation" class="md-nav__link">
+    Run Validation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -610,6 +624,10 @@
 <td align="left">Text of provenance passages in the test topics.</td>
 </tr>
 <tr>
+<td align="left"><a href="https://ikattrecweb.grill.science/ikat_2023_passages_hashes.tsv.bz2">2023_passages_hashes.tsv.bz2</a></td>
+<td align="left">TSV file containing MD5 hashes of passage texts. The <code>.tsv</code> file has this format: <code>doc_id   passage_number    passage_MD5</code>. Total download size is 2.2GB.</td>
+</tr>
+<tr>
 <td align="left"><a href="https://drive.google.com/file/d/1csWaKo0WxZVACrMazlJLcW2Xy1msp9ec/view?usp=sharing">2023_top_1000_query_results.zip</a></td>
 <td align="left">This zip file has queries from both training and testing topics, saved in <code>queries_train.txt</code> and <code>queries_test.txt</code> respectively. The results from the <a href="https://ikat-searcher.grill.science/">iKAT searcher</a> (<code>BM25</code> using manually resolved queries) are saved in the <code>query_results_train</code> and <code>query_results_test</code> folders. Each result file, with up to 1000 results, corresponds to a query based on line numbers, starting from zero. For instance, the results for the first query in <code>queries_train.txt</code> can be found in <code>query_results_train/query_results_000.txt</code>. In each result file, every line shows the <code>ClueWeb22 ID</code> followed by the <code>URL</code>.</td>
 </tr>
@@ -619,7 +637,7 @@
 <p>Below, we provide two baseline runs. </p>
 <ul>
 <li><strong>Method.</strong><ul>
-<li><code>BM25+RM3</code> (Pyserini default) as the initial retrieval (denoted by <code>ret_bm25_rm3</code> in the file name) method to retrieve 1000 passages per query (denoted by <code>k_1000</code>).</li>
+<li><code>BM25+RM3</code> (Pyserini default) as the initial retrieval (denoted by <code>ret_bm25_rm3</code> in the file name) method to retrieve 100 passages per query (denoted by <code>k_100</code>).</li>
 <li>The query in each turn was re-written using: <ol>
 <li>The context, and </li>
 <li>The top-3 relevant PTKB statements (denoted by <code>num_ptkb_3</code> in the file name).</li>
@@ -649,11 +667,11 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://drive.google.com/file/d/19Jm-fudnw85STr4llgqRU7rwQxxiFnAq/view?usp=sharing">ret_bm25_rm3--type_automatic--num_ptkb_3--k_1000--num_psg_3.official.run.json</a></td>
+<td align="left"><a href="https://drive.google.com/file/d/14MyYzEYI7D5rBIsRjYfokyMU-9MQwm6t/view?usp=sharing">ret_bm25_rm3--type_automatic--num_ptkb_3--k_100--num_psg_3.official.run.json</a></td>
 <td align="left">Automatic</td>
 </tr>
 <tr>
-<td align="left"><a href="https://drive.google.com/file/d/1n50dAA5Fy53uoj0WbfDg7WP0Zp1DZhMx/view?usp=sharing">ret_bm25_rm3--type_manual--num_ptkb_3--k_1000--num_psg_3.official.run.json</a></td>
+<td align="left"><a href="https://drive.google.com/file/d/1fCjGmULmYoWimr5cgbN_suQ3hAN8YVNs/view?usp=sharing">ret_bm25_rm3--type_manual--num_ptkb_3--k_100--num_psg_3.official.run.json</a></td>
 <td align="left">Manual</td>
 </tr>
 </tbody>
@@ -713,6 +731,41 @@
 </ul>
 <h3 id="ikat-searcher"><strong>iKAT Searcher</strong></h3>
 <p>iKAT Searcher is a simple tool developed to help with creating the topics for iKAT. The tool allows topic developers to visually assess the behaviour of a retrieval system, ultimately making it easier to develop challenging, but interesting, topics for the Track. You can interact with the system <a href="https://ikat-searcher.grill.science/">here</a>. See the <a href="https://github.com/andrewramsay/Interactive-CAsT/tree/deployment_testing">GitHub repository</a>.</p>
+<h3 id="run-validation"><strong>Run Validation</strong></h3>
+<p>We provide code for run validation in our <a href="https://github.com/irlabamsterdam/iKAT/tree/main/2023/scripts/run_validation">Github repository</a>. Please see the associated README file for detailed instructions on how to run the code. It is crucial to validate your submission files before submitting them. The run files that fail the validation phase will be discarded. We advise you to get familiarized with the validation script as soon as possible and let us know if you have any questions or encounter any problems working with it. </p>
+<p><strong>Note.</strong> You need the MD5 hash file of the passages in the collection to run the validation code. You can download this file from above. </p>
+<p>Below is a summary of the checks that the script performs on a run file.</p>
+<ul>
+<li>Can the file be parsed as valid JSON?</li>
+<li>Can the JSON be parsed into the protocol buffer format defined in <code>protocol_buffers/run.proto</code>?</li>
+<li>Does the run file have at least one turn? </li>
+<li>Is the <code>run_name</code> field non-empty?</li>
+<li>Is the <code>run_type</code> field non-empty and set to <code>automatic</code> or <code>manual</code>?</li>
+<li>Does the number of turns in the run match the number in the test topics file?</li>
+<li>Does the number of turns in each topic in the run match the corresponding number in the test topics file?</li>
+<li>For each turn in the run:</li>
+<li>Is the turn ID valid and matches an entry in the topics file?</li>
+<li>Is any turn ID higher than expected for the selected topic (e.g. turns 1-5 in the topic, but a turn has ID 6 in the run file)?</li>
+<li>(optional, enabled by default) Do all the <code>passage_provenance</code> passage IDs appear in the collection?</li>
+<li>For each response in the turn:<ul>
+<li>Does it have a rank &gt; 0?</li>
+<li>Do the ranks increase with successive responses?</li>
+<li>Does the response have a non-empty <code>text</code> field?</li>
+<li>For each <code>passage_provenance</code> entry:</li>
+<li>Does it have a score less than the previous entry?</li>
+<li>Does it have a passage ID containing a single colon and beginning with 'clueweb22-'?</li>
+<li>Are there less than 1000 <code>passage_provenance</code> entries listed for the response?</li>
+<li>Is there at least one <code>passage_provenance</code> with its <code>used</code> field set to True in the response?</li>
+<li>Does the response have at least one <code>passage_provenance</code> entry?</li>
+<li>Does the response have at least one <code>ptkb_provenance</code> entry?</li>
+<li>For each <code>ptkb_provenance</code> entry:</li>
+<li>Does it have a non-empty ID?</li>
+<li>Does the ID appear in the <code>ptkb</code> field of the topic data?</li>
+<li>Does the text given match that in the topic data?</li>
+<li>Does it have a score less than the previous entry?</li>
+</ul>
+</li>
+</ul>
 <h2 id="additional-data-from-trec-cast"><strong>Additional Data from TREC CAsT</strong></h2>
 <p>We provide the data from previous years' TREC CAsT below. The iKAT topics are similar, with the addition of the Personal Text Knowledge Base. For more information on TREC CAsT, <a href="https://www.treccast.ai/">see the website</a> and read the overview papers <a href="https://arxiv.org/abs/2003.13624">[2019]</a> <a href="https://scholar.google.com/scholar_url?url=https://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/callan/Papers/trec2021-dalton.pdf&amp;hl=en&amp;sa=T&amp;oi=gsb-gga&amp;ct=res&amp;cd=0&amp;d=4712262702816537608&amp;ei=En6IZNaeLcPFmAGMo47oDQ&amp;scisig=AGlGAw9ggvQnzye9tQlrvoob1Js5">[2020]</a> <a href="https://www.cs.cmu.edu/~callan/Papers/trec22-Jeffrey_Dalton.pdf">[2021]</a> <a href="https://trec.nist.gov/pubs/trec31/papers/Overview_cast.pdf">[2022]</a></p>
 <p><strong>Note.</strong> TREC CAsT did not include a PTKB but you can be creative and modify the data according to your needs. Also, TREC CAsT used different collections (Wikipedia, KILT, MS MARCO, etc.) at different stages. <strong><em>iKAT is using a subset of the recently released ClueWeb22-B</em></strong>. </p>
