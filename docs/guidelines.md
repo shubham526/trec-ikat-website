@@ -334,7 +334,7 @@ Similar to CAsT year 4, only a subset of turns may be evaluated for provenance r
 |:--------------------------------:	|:------------:	|
 | Guidelines released              	| April 2023   	|
 | Test topics released             	| June 2023    	|
-| **Submission deadline**              	| **August 31, 2023**  	|
+| **Submission deadline**              	| **September 3, 2023 AOE**  	|
 | Results released to participants 	| October 2023 	|
 
 
