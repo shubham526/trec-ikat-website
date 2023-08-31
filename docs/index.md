@@ -1,6 +1,6 @@
 # **Home**
 
-*Last updated: August 30, 2023*    
+*Last updated: August 31, 2023*    
 
 [:fontawesome-brands-github: See the official TREC iKAT repository for tools and code related to the track](https://github.com/irlabamsterdam/iKAT)
 
@@ -41,15 +41,13 @@ All data associated with this work is licensed and released under a
 **[Leif Azzopardi](https://www.strath.ac.uk/staff/azzopardileifdr/), University of Strathclyde, Scotland.** Dr. Azzopardi is an Associate Professor in Artifical Intelligence and Data Science within the Departement of Computer and Information Sciences at the University of Strathclyde. He is the PI for the Interaction Lab (i-lab) which specializes in developing, evaluating and modelling information rich and information intensive applications and agents.
 
 
-## **Contact** 
-- Twitter: [@trec_ikat](https://twitter.com/home)
-- Email: trec.ikat.ai@gmail.com
-- Google Groups: [trec-ikat@googlegroups.com](https://groups.google.com/u/3/g/trec-ikat)
-- Slack: [ikat-2023](https://app.slack.com/client/TEAQCDVSA/C04QPBXNL01)
+## **Submit Your Runs**
+
+The [submission system](http://ir.nist.gov/trecsubmit/ikat.html) is now live! Before submission, please validate your run using the provided [validation code](https://github.com/irlabamsterdam/iKAT/tree/main/2023/scripts/run_validation).
 
 ## **Announcements**
 
-- :boom: <span style="color:red">New! Baselines released. Guidelines updated. Demo released.</span>
+- New! Baselines released. Guidelines updated. Demo released.
 
 - Additional data released for the participants. See the data section.
 
@@ -58,3 +56,9 @@ All data associated with this work is licensed and released under a
 - Sample topics released! See the data section of the website. 
 
 - Guidelines released!
+
+## **Contact** 
+- Twitter: [@trec_ikat](https://twitter.com/home)
+- Email: trec.ikat.ai@gmail.com
+- Google Groups: [trec-ikat@googlegroups.com](https://groups.google.com/u/3/g/trec-ikat)
+- Slack: [ikat-2023](https://app.slack.com/client/TEAQCDVSA/C04QPBXNL01)
