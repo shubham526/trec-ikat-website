@@ -33,6 +33,7 @@ All data associated with this work is licensed and released under a
 
 **[Zahra Abbasiantaeb](https://zahraabbasiantaeb.github.io/), University of Amsterdam, The Netherlands.** Zahra is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi. She is working on conversational search and recommendation. Earlier, she has also worked on patent reference mining. Zahra obtained her masters in AI from the Amirkabir University of Technology with a focus on Question Answering systems.
 
+**Simon Lupart, University of Amsterdam, The Netherlands.** Simon is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi.
 
 **[Shubham Chatterjee](https://www.dcs.gla.ac.uk/~shubham/), University of Glasgow, Scotland.** Dr. Chatterjee is a Research Associate in the [Glasgow Representation and Information Learning (GRILL) Lab](https://grilllab.ai/), part of the [Glasgow Information Retrieval](https://www.gla.ac.uk/schools/computing/research/researchsections/ida-section/informationretrieval/) group. The goal of his research is to design intelligent search systems which would one day respond to a user's open-ended and complex information needs with a complete answer instead of a ranked list of results.
 
