@@ -8,13 +8,17 @@
 
 ## **Introduction to TREC Interactive Knowledge Assistance Track**
 
-Voice-based assistant interactions are now widespread, with a recent [Comscore](https://www.comscore.com/Insights/Blog/Smart-Speaker-Penetration-Hits-20-Percent-of-US-Wi-Fi-Households) report showing that over 20% of homes in America own a smart speaker. Furthermore, the recent announcement of *assistant-enabled smart glasses* from leading tech companies continues this trend towards real-world interaction. However, despite current assistants' ability to perform well-defined simple actions, their ability to support information seeking in conversations continues to be limited.
+The widespread adoption of voice-based assistants is significantly changing how we interact with technology. According to a [Comscore report](https://www.comscore.com/Insights/Blog/Smart-Speaker-Penetration-Hits-20-Percent-of-US-Wi-Fi-Households), over 20% of U.S. households now own a smart speaker. This trend is further exemplified by the recent introduction of assistant-enabled smart glasses by major tech companies, pushing the boundaries of real-world applications.
 
-Conversational Information Seeking (CIS) is an established and important research direction. It is of interest to the broad research community within information retrieval, such as ranking, summarizing and question answering (QA), as well as for natural language processing and dialogue systems communities.
+Despite their proficiency in executing simple, well-defined tasks, these assistants still face limitations in supporting conversational information seeking (CIS). CIS is crucial within fields such as information retrieval, natural language processing, and dialogue systems, focusing on tasks like ranking, summarizing, and question answering.
 
-The TREC Interactive Knowledge Assistance Track (iKAT) builds on the experience of four successful years of [TREC Conversational Assistance Track (CAsT)](https://www.treccast.ai/), where the key focus of iKAT is on researching and developing collaborative information seeking conversational agents which can tailor and personalize their response based on what they learn about and from the user.
+The TREC Interactive Knowledge Assistance Track (iKAT) builds on the four years of success of the TREC Conversational Assistance Track (CAsT), which can be explored further [here](https://www.treccast.ai/). iKAT is designed to research and develop conversational agents that excel in collaborative information seeking by personalizing responses based on user-derived insights.
 
-The fourth year of CAsT aimed to add more conversational elements to the interaction streams, by introducing mixed initiatives (clarifications, and suggestions) to create multi-path, multi-turn conversations for each topic. TREC iKAT evolves CAsT into a new track to signal this new trajectory. iKAT aims to focus on supporting multi-path, multi-turn, multi-perspective conversations, i.e., for a given topic, the direction and the conversation that evolves depends not only on the prior responses but also on the user (and their background/perspective/context/etc). As different personas undertake various topics, systems need to build and develop a picture of who the user is, in order to best address their information needs. Put another way, iKAT focuses on system understanding of user knowledge and information needs in accordance to the available context.
+CAsT's fourth year introduced more interactive elements, such as clarifications and suggestions, fostering multi-turn, multi-path conversations. iKAT evolves from CAsT with a renewed focus on supporting diverse, multi-turn conversations tailored to the user’s background, perspective, and context. This means that for any given topic, the flow and substance of the conversation can vary significantly depending on the user’s individual traits and needs.
+
+iKAT's primary goal is to advance research on conversational agents that not only respond to users’ immediate queries but also adapt their responses based on the cumulative context of the interaction. This aspect of personalization is particularly timely with the advancements in large language models (LLMs), which introduce new challenges and opportunities in the dynamic interplay of user context, system promptings, and conversational initiatives.
+
+
 
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
@@ -35,30 +39,20 @@ All data associated with this work is licensed and released under a
 
 **[Simon Lupart](https://simonlupart.github.io/), University of Amsterdam, The Netherlands.** Simon is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi and Prof. Kanoulas. He worked in IR for the past two years at Naver Labs Europe, and joined UvA to focus on Conversational search.
 
-**[Shubham Chatterjee](https://www.dcs.gla.ac.uk/~shubham/), University of Glasgow, Scotland.** Dr. Chatterjee is a Research Associate in the [Glasgow Representation and Information Learning (GRILL) Lab](https://grilllab.ai/), part of the [Glasgow Information Retrieval](https://www.gla.ac.uk/schools/computing/research/researchsections/ida-section/informationretrieval/) group. The goal of his research is to design intelligent search systems which would one day respond to a user's open-ended and complex information needs with a complete answer instead of a ranked list of results.
+**[Shubham Chatterjee](https://homepages.inf.ed.ac.uk/schatte4/index.html), University of Edinburgh, Scotland.** Dr. Chatterjee is a Research Associate in the [Generalized Representation and Information Learning (GRILL) Lab](https://grilllab.ai/), a leading research group in the School of Informatics at the University of Edinburgh that works on Neural Information Retrieval, Conversational Information Seeking, and Large Language Models. Dr. Chatterjee works on Neural IR, Entity-Orinted Search, Conversational IR, and the applications for LLMs to these areas.
 
-**[Jeff Dalton](https://www.dcs.gla.ac.uk/~jeff/), University of Glasgow, Scotland.** Dr. Dalton is a Senior Lecturer (Associate Professor) at the Department of Computing Science, University of Glasgow. He is also the PI for the GRILL Lab. His research focuses on new methods for machine understanding of language and text data using deep neural networks and entity knowledge graphs for improving information seeking applications.
+**[Jeff Dalton](https://www.dcs.gla.ac.uk/~jeff/), University of Edinburgh, Scotland.** Dr. Dalton is a Associate Professor (Reader) and Chancellor's Fellow at the School of Informatics, the University of Edinburgh. He is also a Turing AI Fellow and PI for the GRILL Lab. His research focuses on new methods for machine understanding of language and text data using deep neural networks and entity knowledge graphs for improving information seeking applications.
 
 **[Leif Azzopardi](https://www.strath.ac.uk/staff/azzopardileifdr/), University of Strathclyde, Scotland.** Dr. Azzopardi is an Associate Professor in Artifical Intelligence and Data Science within the Departement of Computer and Information Sciences at the University of Strathclyde. He is the PI for the Interaction Lab (i-lab) which specializes in developing, evaluating and modelling information rich and information intensive applications and agents.
 
 
-## **Submit Your Runs (iKAT 2023)**
+## **Submit Your Runs (iKAT 2024)**
 
-The [submission system](http://ir.nist.gov/trecsubmit/ikat.html) is now live! Before submission, please validate your run using the provided [validation code](https://github.com/irlabamsterdam/iKAT/tree/main/2023/scripts/run_validation).
+We will share details of how to submit the runs soon. We will also provide a validation script to validate your runs for submission. Runs failing the validation script will not be accepted.
 
 ## **Announcements**
 
-- Release of the TREC iKAT 2024 Guidelines.
-
-- New! Baselines released. Guidelines updated. Demo released.
-
-- Additional data released for the participants. See the data section.
-
-- Train topics released! See the data section of the website.
-
-- Sample topics released! See the data section of the website. 
-
-- Guidelines released!
+- :boom: <span style="color:red;">New!</span> Release of the TREC iKAT 2024 Guidelines.
 
 ## **Contact** 
 - Twitter: [@trec_ikat](https://twitter.com/home)
