@@ -1,6 +1,6 @@
 # **Home**
 
-*Last updated: August 31, 2023*    
+*Last updated: May 7, 2024*    
 
 [:fontawesome-brands-github: See the official TREC iKAT repository for tools and code related to the track](https://github.com/irlabamsterdam/iKAT)
 
@@ -33,7 +33,7 @@ All data associated with this work is licensed and released under a
 
 **[Zahra Abbasiantaeb](https://zahraabbasiantaeb.github.io/), University of Amsterdam, The Netherlands.** Zahra is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi. She is working on conversational search and recommendation. Earlier, she has also worked on patent reference mining. Zahra obtained her masters in AI from the Amirkabir University of Technology with a focus on Question Answering systems.
 
-**Simon Lupart, University of Amsterdam, The Netherlands.** Simon is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi.
+**[Simon Lupart](https://simonlupart.github.io/), University of Amsterdam, The Netherlands.** Simon is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi and Prof. Kanoulas. He worked in IR for the past two years at Naver Labs Europe, and joined UvA to focus on Conversational search.
 
 **[Shubham Chatterjee](https://www.dcs.gla.ac.uk/~shubham/), University of Glasgow, Scotland.** Dr. Chatterjee is a Research Associate in the [Glasgow Representation and Information Learning (GRILL) Lab](https://grilllab.ai/), part of the [Glasgow Information Retrieval](https://www.gla.ac.uk/schools/computing/research/researchsections/ida-section/informationretrieval/) group. The goal of his research is to design intelligent search systems which would one day respond to a user's open-ended and complex information needs with a complete answer instead of a ranked list of results.
 
@@ -42,11 +42,13 @@ All data associated with this work is licensed and released under a
 **[Leif Azzopardi](https://www.strath.ac.uk/staff/azzopardileifdr/), University of Strathclyde, Scotland.** Dr. Azzopardi is an Associate Professor in Artifical Intelligence and Data Science within the Departement of Computer and Information Sciences at the University of Strathclyde. He is the PI for the Interaction Lab (i-lab) which specializes in developing, evaluating and modelling information rich and information intensive applications and agents.
 
 
-## **Submit Your Runs**
+## **Submit Your Runs (iKAT 2023)**
 
 The [submission system](http://ir.nist.gov/trecsubmit/ikat.html) is now live! Before submission, please validate your run using the provided [validation code](https://github.com/irlabamsterdam/iKAT/tree/main/2023/scripts/run_validation).
 
 ## **Announcements**
+
+- Release of the TREC iKAT 2024 Guidelines.
 
 - New! Baselines released. Guidelines updated. Demo released.
 

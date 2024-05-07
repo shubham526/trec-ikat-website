@@ -1,7 +1,13 @@
 # **Datasets and Resources**
 ---
 
-## :boom: **Topics for iKAT Year 1**
+## :boom: **Topics for iKAT Year 2 (2024)**
+
+|    File      |      Description      |
+|:------------|:---------------------|
+| 	Release later       |       Train topics in JSON format.             |
+
+## :boom: **Topics for iKAT Year 1 (2023)**
 
 |    File      |      Description      |
 |:------------|:---------------------|
@@ -17,7 +23,7 @@
 | 	[2023_passages_hashes.tsv.bz2](https://ikattrecweb.grill.science/ikat_2023_passages_hashes.tsv.bz2)       |  TSV file containing MD5 hashes of passage texts. The `.tsv` file has this format: `doc_id   passage_number    passage_MD5`. Total download size is 2.2GB.           |
 | 	[2023_top_1000_query_results.zip](https://drive.google.com/file/d/1csWaKo0WxZVACrMazlJLcW2Xy1msp9ec/view?usp=sharing)       |       This zip file has queries from both training and testing topics, saved in `queries_train.txt` and `queries_test.txt` respectively. The results from the [iKAT searcher](https://ikat-searcher.grill.science/) (`BM25` using manually resolved queries) are saved in the `query_results_train` and `query_results_test` folders. Each result file, with up to 1000 results, corresponds to a query based on line numbers, starting from zero. For instance, the results for the first query in `queries_train.txt` can be found in `query_results_train/query_results_000.txt`. In each result file, every line shows the `ClueWeb22 ID` followed by the `URL`.            |
 
-## :boom: **Baseline Runs**
+## :boom: **Baseline Runs (iKAT 2023)**
 
 Below, we provide two baseline runs. 
 
@@ -43,7 +49,7 @@ Below, we provide two baseline runs.
 | 	[ret_bm25_rm3--type_manual--num_ptkb_3--k_100--num_psg_3.official.run.json](https://drive.google.com/file/d/1fCjGmULmYoWimr5cgbN_suQ3hAN8YVNs/view?usp=sharing)       |      Manual             |
 
 
-## :boom: **Document Collection: TREC iKAT 2023 ClueWeb22-B**
+## :boom: **Document Collection: TREC iKAT 2023/2024 ClueWeb22-B**
 
 The collection distribution is being handled directly by CMU and not the iKAT organizers. Please follow these steps to get your data license ASAP:
 
@@ -62,7 +68,7 @@ Please give enough time to the CMU licensing office to accept your request. A do
 
 We provide the following additional resources for the teams:
 
-### **TREC iKAT 2023 ClueWeb22-B Passage Collection**
+### **TREC iKAT ClueWeb22-B Passage Collection**
 
 We provide a segmented version of the TREC iKAT 2023 ClueWeb22-B Document collection available from CMU in two formats: `JSONL` and `TrecWeb`. 
 
