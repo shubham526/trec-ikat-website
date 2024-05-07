@@ -1,14 +1,22 @@
 # **Guidelines for the task** 
 
-The guidelines are also available as a [**Google Doc**](https://docs.google.com/document/d/1dso0VANm5Q08UWt4ppZvzvH6zkpRhfoukwpBgeJNbHE/edit?usp=sharing).
+The guidelines for iKAT 2024 (year 2) are now available as [**Google Doc iKAT 2024**](https://docs.google.com/document/d/1w7Eg6fwFJ3NbaFDp-U6-OOytXUAHygxwwMKdr4MzSK0/edit?usp=sharing).
+
+The guidelines for iKAT 2023 (year 1) are also available as a [**Google Doc iKAT 2023**](https://docs.google.com/document/d/1dso0VANm5Q08UWt4ppZvzvH6zkpRhfoukwpBgeJNbHE/edit?usp=sharing).
 
 ---
 
-## **Participation**
+## **iKAT 2024 Guidelines** 
+
+[**Google Doc iKAT 2024**](https://docs.google.com/document/d/1w7Eg6fwFJ3NbaFDp-U6-OOytXUAHygxwwMKdr4MzSK0/edit?usp=sharing)
+
+## **iKAT 2023 Guidelines** 
+
+### **Participation**
 
 Participants [must register](https://ir.nist.gov/trecsubmit.open/application.html) to submit. To request a late registration, please email trec@nist.gov requesting a registration key. The dissemination form must be returned to submit runs.
 
-## **Track Overview**
+### **Track Overview**
 
 In iKAT, the direction of the conversation can be changed in each turn based on:
 
@@ -20,7 +28,7 @@ The persona of the user and their information needs form the direction of the co
 
 Note: In the first year, the PTKB is provided for each conversation and the participants do not have to generate or update it.
 
-## **Task Overview**
+### **Task Overview**
 
 In Year 1, the input at each conversation turn that is provided to the participants is the following: 
 
@@ -40,7 +48,7 @@ We offer the following tasks:
 
 We plan on providing baseline ranking and response generation methods. 
 
-### **Submission Classes**
+#### **Submission Classes**
 
 There are two submission classes:
 
@@ -56,7 +64,7 @@ There are two submission classes:
 
 In the submission form, we will ask the pariticpants to mark which data sources they used in the manual submissions. You may either use some or all available lableled data, but this should be clearly specified in the run submission form.
 
-### **Important Points Regarding Submissions**
+#### **Important Points Regarding Submissions**
 
 - Title of the topic cannot be used.
 
@@ -71,7 +79,7 @@ In the submission form, we will ask the pariticpants to mark which data sources 
 - The file `2023_top_1000_query_results.zip` provided on the "Data and Resources" page of this website is based on the manually rewritten queries. Teams may use them in their submission; however, please note that such submissions would be automaitcally considered as `manual`.
 
 
-## **Example Dialogue Tree**
+### **Example Dialogue Tree**
 
 An example of two different conversations based on different personas for the same topic is shown in the following figure. For each user turn, systems should return a ranked list of text responses. Each response has one or more (ranked) source passages as provenance. In addition, the systems should provide a sorted list of relevant statements of PTKB with the corresponding relevance score.
 
@@ -79,7 +87,7 @@ An example of two different conversations based on different personas for the sa
 
 For an explanation of the above diagram, see the [**Google Doc**](https://docs.google.com/document/d/1dso0VANm5Q08UWt4ppZvzvH6zkpRhfoukwpBgeJNbHE/edit?usp=sharing).
 
-## **Primary Task Details**
+### **Primary Task Details**
 
 The main task in iKAT can be defined as **personalized retrieval-based "candidate response retrieval" in context of the conversation**. The task can be divided into the following sub-tasks:
 
@@ -89,13 +97,13 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 -   **Extract or generate a response.** Each response can be generated from multiple passages. It can be an abstractive or extractive summary of the corresponding passages. Each response must have one or more ranked passages as provenance used to produce it.
 
-### **What is a response?**
+#### **What is a response?**
 
 -   A response is a text suitable for showing to the user. It should be fluent, satisfy their information needs, and not contain extraneous or redundant information. 
 
 -   A response is limited to a maximum of 250 words (as measured by the `Tokenizer` function of `spacy.tokenizer` in spaCy v3.3 library), but should vary depending on an appropriate query-response.
 
-### **Passage (provenance) Ranking**
+#### **Passage (provenance) Ranking**
 
 -   A "run" takes the provenance passages for all responses in response order. The first 1000 provenances for each turn will be ranked. 
 
@@ -105,7 +113,7 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 -   Each provenance is written in the format *doc_id:passage_id*.
 
-### **PTKB Statement (provenance) Ranking**
+#### **PTKB Statement (provenance) Ranking**
 
 -   A 'run' takes the provenance PTKB statements for all responses on which the system's response is based.
 
@@ -113,12 +121,12 @@ The main task in iKAT can be defined as **personalized retrieval-based "candidat
 
 -   Teams may decide to include non-relevant statements with very low scores or just remove them from the ranked list.
 
-## **Collection**
+### **Collection**
 
 The text collection contains a subset of **ClueWeb22-B** documents, prepared by the organizers in collaboration with CMU. The goal is to retrieve passages from target open-domain text collections. Provenance must be provided from documents in the collection. 
 
 
-### **Passage Segmentation** 
+#### **Passage Segmentation** 
 
 For assessment, we will judge provenance passages. We segment the documents in our collection into passages in a similar manner as done by the TREC Deep Learning track for segmenting MS MARCO documents into passages: First, each document is trimmed to 10k characters. Then a 10-sentence sliding window with a 5-sentence stride is used to generate the passages. 
 
@@ -127,7 +135,7 @@ An example document with some passage segmentation is provided in TrecWeb format
 
 ![Picture depicting passage segmentation for iKAT](passage-segmentation.png)
 
-## **Topic Format**
+### **Topic Format**
 We will provide several sample topics with example baseline runs for validation and testing. Below is a sample topics file with two subtrees of the same topic. Subtrees are identified by topic and subtree ID,  i.e topic 1, subtree 2 is `1-2`. Also a `passage_provenance` field with a list of provenance passages and `ptkb_provenance` field with a list of provenance statements from PTKB, that are used for generating the response, are included. An example is shown below for illustrative purposes. 
 
 ```
@@ -239,7 +247,7 @@ We will provide several sample topics with example baseline runs for validation 
 
 
 ```
-## **Task Submissions**
+### **Task Submissions**
 Participants submit the output of their system on the specified “test” topics.  A single participant may submit the output of multiple systems, up to a maximum of four runs. A sample run is provided below:
 
 ```
@@ -317,7 +325,7 @@ For provenance ranking, this will be converted to a traditional TREC run format:
 
 Runs may include up to 1000 responses for each user turn. For provenance ranking, only the first 1000 pieces of unique provenance will be used. As in previous years of CAsT, only a limited top-K responses and provenances will be assessed according to resource constraints. 
 
-## **Evaluation**
+### **Evaluation**
 
 We will use the relevance assessment methods used in previous years of CAsT for relevance to individual turns.
 
@@ -328,7 +336,7 @@ We will use the relevance assessment methods used in previous years of CAsT for 
 Similar to CAsT year 4, only a subset of turns may be evaluated for provenance ranking effectiveness. This will be disclosed to participants after assessment is completed.
 
 
-## **Timeline**
+### **Timeline**
 
 |               Task               	|     Date     	|
 |:--------------------------------:	|:------------:	|
