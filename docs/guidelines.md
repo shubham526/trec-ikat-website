@@ -1,6 +1,6 @@
 # **Guidelines for the task** 
 
-The guidelines for iKAT 2024 (year 2) are now available as [**Google Doc iKAT 2024**](https://docs.google.com/document/d/1w7Eg6fwFJ3NbaFDp-U6-OOytXUAHygxwwMKdr4MzSK0/edit?usp=sharing).
+The guidelines for iKAT 2024 (year 2) are now available as [**Google Doc iKAT 2024**](https://docs.google.com/document/d/1S0_HpzTg1WKQ4mx7ps6d3-ChB9dmmtk8YPyYjCsZv_4/edit?usp=sharing).
 
 The guidelines for iKAT 2023 (year 1) are also available as a [**Google Doc iKAT 2023**](https://docs.google.com/document/d/1dso0VANm5Q08UWt4ppZvzvH6zkpRhfoukwpBgeJNbHE/edit?usp=sharing).
 
@@ -8,7 +8,7 @@ The guidelines for iKAT 2023 (year 1) are also available as a [**Google Doc iKAT
 
 ## **iKAT 2024 Guidelines** 
 
-[**Google Doc iKAT 2024**](https://docs.google.com/document/d/1w7Eg6fwFJ3NbaFDp-U6-OOytXUAHygxwwMKdr4MzSK0/edit?usp=sharing)
+[**Google Doc iKAT 2024**](https://docs.google.com/document/d/1S0_HpzTg1WKQ4mx7ps6d3-ChB9dmmtk8YPyYjCsZv_4/edit?usp=sharing)
 
 ## **iKAT 2023 Guidelines** 
 
