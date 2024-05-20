@@ -1,6 +1,6 @@
 # **Home**
 
-*Last updated: May 7, 2024*    
+*Last updated: May 20, 2024*    
 
 [:fontawesome-brands-github: See the official TREC iKAT repository for tools and code related to the track](https://github.com/irlabamsterdam/iKAT)
 
@@ -53,6 +53,11 @@ We will share details of how to submit the runs soon. We will also provide a val
 ## **Announcements**
 
 - :boom: <span style="color:red;">New!</span> Release of the TREC iKAT 2024 Guidelines.
+
+## **Publications**
+
+- [iKAT Year 1 Overview Paper](https://arxiv.org/abs/2401.01330)
+- [iKAT Resource Paper. SIGIR 2024] (https://arxiv.org/abs/2405.02637)
 
 ## **Contact** 
 - Twitter: [@trec_ikat](https://twitter.com/home)
