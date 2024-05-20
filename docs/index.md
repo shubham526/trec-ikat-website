@@ -57,7 +57,7 @@ We will share details of how to submit the runs soon. We will also provide a val
 ## **Publications**
 
 - [iKAT Year 1 Overview Paper](https://arxiv.org/abs/2401.01330)
-- [iKAT Resource Paper. SIGIR 2024] (https://arxiv.org/abs/2405.02637)
+- [iKAT Resource Paper. SIGIR 2024](https://arxiv.org/abs/2405.02637)
 
 ## **Contact** 
 - Twitter: [@trec_ikat](https://twitter.com/home)
