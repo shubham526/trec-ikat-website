@@ -137,7 +137,7 @@ The text collection contains a subset of ClueWeb22B documents, prepared by the o
 
 Getting the license to use the collection can be time-consuming and would be handled by CMU, not the iKAT organizers. Please follow these steps to get your data license ASAP:
 
-- Sign the license form available on the ClueWeb22 project [web page](https://lemurproject.org/clueweb22/obtain.php) and send the form to CMU for approval (`jlm4@andrew.cmu.edu`).
+- Sign the license form available on the ClueWeb22 project [web page](https://lemurproject.org/clueweb22/obtain.php) and send the form to CMU for approval (`clueweb@andrew.cmu.edu`).
 
 - Once you have the license, send a mail to Andrew Ramsay (`andrew.ramsay@glasgow.ac.uk`) to have access to a download link with the preprocessed iKAT passage collection, and other resources such as Lucene and SPLADE indices. 
 
