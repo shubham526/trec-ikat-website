@@ -321,6 +321,7 @@ We will provide several sample topics with example baseline runs for validation 
 ## **Task Submissions**
 
 Participants submit the output of their system on the specified "test" topics.  A single participant can submit maximum of:
+
 - 4 automatic runs, 
 - 2 manual runs,
 - 2 only response generation runs.
@@ -516,10 +517,10 @@ Similar to iKAT Year 1, only a subset of turns may be evaluated for provenance r
 
 |               Task               	|     Date     	|
 |:--------------------------------:	|:------------:	|
-| Guidelines released              	| May 2024   	|
-| Test topics released             	| June 2024    	|
+| Guidelines released              	| May 20, 2024   	|
+| Test topics released             	| August 5, 2024    	|
 | **Submission deadline**              	| **August 31, 2024 AOE**  	|
-| Results released to participants 	| October 2023 	|
+| Results released to participants 	| TBD 	|
 
 
 

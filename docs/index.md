@@ -1,6 +1,6 @@
 # **Home**
 
-*Last updated: May 20, 2024*    
+*Last updated: August 5, 2024*    
 
 [:fontawesome-brands-github: See the official TREC iKAT repository for tools and code related to the track](https://github.com/irlabamsterdam/iKAT)
 
@@ -39,7 +39,7 @@ All data associated with this work is licensed and released under a
 
 **[Simon Lupart](https://simonlupart.github.io/), University of Amsterdam, The Netherlands.** Simon is a Ph.D. student at the IRLab supervised by Dr. Aliannejadi and Prof. Kanoulas. He worked in IR for the past two years at Naver Labs Europe, and joined UvA to focus on Conversational search.
 
-**[Shubham Chatterjee](https://homepages.inf.ed.ac.uk/schatte4/index.html), University of Edinburgh, Scotland.** Dr. Chatterjee is a Research Associate in the [Generalized Representation and Information Learning (GRILL) Lab](https://grilllab.ai/), a leading research group in the School of Informatics at the University of Edinburgh that works on Neural Information Retrieval, Conversational Information Seeking, and Large Language Models. Dr. Chatterjee works on Neural IR, Entity-Orinted Search, Conversational IR, and the applications for LLMs to these areas.
+**[Shubham Chatterjee](https://homepages.inf.ed.ac.uk/schatte4/index.html), Missouri University of Science and Technology, Missouri, USA.** Dr. Chatterjee is an Assistant Professor of Computer Science.Dr. Chatterjee works on Neural IR, Entity-Orinted Search, Conversational IR, and the applications for LLMs to these areas.
 
 **[Jeff Dalton](https://www.dcs.gla.ac.uk/~jeff/), University of Edinburgh, Scotland.** Dr. Dalton is a Associate Professor (Reader) and Chancellor's Fellow at the School of Informatics, the University of Edinburgh. He is also a Turing AI Fellow and PI for the GRILL Lab. His research focuses on new methods for machine understanding of language and text data using deep neural networks and entity knowledge graphs for improving information seeking applications.
 
@@ -52,7 +52,8 @@ We will share details of how to submit the runs soon. We will also provide a val
 
 ## **Announcements**
 
-- :boom: <span style="color:red;">New!</span> Release of the TREC iKAT 2024 Guidelines.
+- :boom: <span style="color:red;">New!</span> Release of the TREC iKAT 2024 Test Topics.
+- Release of the TREC iKAT 2024 Guidelines.
 
 ## **Publications**
 

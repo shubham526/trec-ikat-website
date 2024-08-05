@@ -1,4 +1,4 @@
-# **TREC iKAT 2023: Getting Started**
+# **TREC iKAT: Getting Started**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MOKGQZxjDhREX6d-m68om9mzTmHbwLsa?usp=sharing)
 
