@@ -7,7 +7,7 @@
 |:------------|:---------------------|
 | 	[2024_test_topics.json](https://drive.google.com/file/d/1pIu_kSn6YHQRX74DFknmjUJA34-JY67M/view?usp=sharing)       |       Test topics in JSON format.             |
 
-## **Addtional Data**
+## **Additional Data**
 
 We also provide [additional data](additional_data.md) from iKAT Year 1 and TREC CAsT 2019-2022. 
 
