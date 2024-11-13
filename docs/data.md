@@ -42,7 +42,15 @@ cat ikat_2023_passage_index.tar.bz2.part* > ikat_203_passage_index.tar.bz2
 ```
 
 Total download size is approximately 150 GB
-	
+
+### **Other indices**
+
+We also offer 3 other indices, distributed in the same split-archive fashion as the Lucene index:
+
+  1. A PyTerrier DeepCT index (`pt_deepct.tar.bz2`), total download size ~70GB
+  2. A PyTerrier SPLADE index (`pt_splade.tar.bz2`), total download size ~138GB
+  3. A SPLADE index (`splade_index.tar.bz2`), total download size ~97GB
+
 ## **How do I access these resources?** 
 
 Each team should use a URL of `https://ikattrecweb.grill.science/<team_name>` to access the files. The page will ask for a userID and password. Enter the login details which you obtained from the iKAT organizers. You should see a page which lists each type of data and has links to the individual files listed above, along with their checksum files.
