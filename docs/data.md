@@ -33,23 +33,20 @@ In case you have segmented the document collection yourself, you may check wheth
 	- Total download size is 2.2 GB
 	
 	
-## **Lucene Passage Index**
+## **Pre-built Indices**
 
-We also provide a sparse Lucene index generated from the `JSONL` passage files above using Pyserini. The files form a single `.tar.bz2` archive split into sections for simpler downloading due to the overall size. To extract the archive, once downloaded, you must combine each of the sections in name order back into a single file: 
+We provide the following indices to help participants get started.
 
-```bash
-cat ikat_2023_passage_index.tar.bz2.part* > ikat_203_passage_index.tar.bz2
-```
+| File | Description | Size (Approximate) |
+|:---------------------|:---------------------------------------------------------------------------------------------------------------------------|:-------------------|
+| Lucene passage index (`ikat_2023_passage_index.tar.bz2`)| Sparse Lucene index generated from the `JSONL` passage files above using Pyserini. The files form a single `.tar.bz2` archive split into sections for simpler downloading due to the overall size. To extract the archive, once downloaded, combine each of the sections in name order back into a single file using the following command: `cat ikat_2023_passage_index.tar.bz2.part* > ikat_2023_passage_index.tar.bz2`. | 150 GB |
+| DeepCT Index (`pt_deepct.tar.bz2`) | [DeepCT](https://arxiv.org/abs/1910.10687) index built using [PyTerrier](https://github.com/terrierteam/pyterrier_deepct) | 70 GB |
+| SPLADE Index (`pt_splade.tar.bz2`) | [SPLADE++](https://arxiv.org/abs/2205.04733) index built using [PyTerrier](https://github.com/cmacdonald/pyt_splade) | 138 GB | 
+| SPLADE index (`splade_index.tar.bz2`) | [SPLADE++](https://arxiv.org/abs/2205.04733) index built using [official SPALDE code](https://github.com/naver/splade) | 97 GB | 
 
-Total download size is approximately 150 GB
+### **Code to build and search indices**
 
-### **Other indices**
-
-We also offer 3 other indices, distributed in the same split-archive fashion as the Lucene index:
-
-  1. A PyTerrier DeepCT index (`pt_deepct.tar.bz2`), total download size ~70GB
-  2. A PyTerrier SPLADE index (`pt_splade.tar.bz2`), total download size ~138GB
-  3. A SPLADE index (`splade_index.tar.bz2`), total download size ~97GB
+We open-source the code used to build the indices above. You can find the code [here](https://github.com/shubham526/ikat-2024/tree/main)
 
 ## **How do I access these resources?** 
 
