@@ -294,9 +294,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lucene-passage-index" class="md-nav__link">
-    Lucene Passage Index
+  <a href="#pre-built-indices" class="md-nav__link">
+    Pre-built Indices
   </a>
+  
+    <nav class="md-nav" aria-label="Pre-built Indices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-to-build-and-search-indices" class="md-nav__link">
+    Code to build and search indices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -407,9 +420,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lucene-passage-index" class="md-nav__link">
-    Lucene Passage Index
+  <a href="#pre-built-indices" class="md-nav__link">
+    Pre-built Indices
   </a>
+  
+    <nav class="md-nav" aria-label="Pre-built Indices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-to-build-and-search-indices" class="md-nav__link">
+    Code to build and search indices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -495,11 +521,41 @@
 </ul>
 </li>
 </ul>
-<h2 id="lucene-passage-index"><strong>Lucene Passage Index</strong></h2>
-<p>We also provide a sparse Lucene index generated from the <code>JSONL</code> passage files above using Pyserini. The files form a single <code>.tar.bz2</code> archive split into sections for simpler downloading due to the overall size. To extract the archive, once downloaded, you must combine each of the sections in name order back into a single file: </p>
-<pre><code class="language-bash">cat ikat_2023_passage_index.tar.bz2.part* &gt; ikat_203_passage_index.tar.bz2
-</code></pre>
-<p>Total download size is approximately 150 GB</p>
+<h2 id="pre-built-indices"><strong>Pre-built Indices</strong></h2>
+<p>We provide the following indices to help participants get started.</p>
+<table>
+<thead>
+<tr>
+<th align="left">File</th>
+<th align="left">Description</th>
+<th align="left">Size (Approximate)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Lucene passage index (<code>ikat_2023_passage_index.tar.bz2</code>)</td>
+<td align="left">Sparse Lucene index generated from the <code>JSONL</code> passage files above using Pyserini. The files form a single <code>.tar.bz2</code> archive split into sections for simpler downloading due to the overall size. To extract the archive, once downloaded, combine each of the sections in name order back into a single file using the following command: <code>cat ikat_2023_passage_index.tar.bz2.part* &gt; ikat_2023_passage_index.tar.bz2</code>.</td>
+<td align="left">150 GB</td>
+</tr>
+<tr>
+<td align="left">DeepCT Index (<code>pt_deepct.tar.bz2</code>)</td>
+<td align="left"><a href="https://arxiv.org/abs/1910.10687">DeepCT</a> index built using <a href="https://github.com/terrierteam/pyterrier_deepct">PyTerrier</a></td>
+<td align="left">70 GB</td>
+</tr>
+<tr>
+<td align="left">SPLADE Index (<code>pt_splade.tar.bz2</code>)</td>
+<td align="left"><a href="https://arxiv.org/abs/2205.04733">SPLADE++</a> index built using <a href="https://github.com/cmacdonald/pyt_splade">PyTerrier</a></td>
+<td align="left">138 GB</td>
+</tr>
+<tr>
+<td align="left">SPLADE index (<code>splade_index.tar.bz2</code>)</td>
+<td align="left"><a href="https://arxiv.org/abs/2205.04733">SPLADE++</a> index built using <a href="https://github.com/naver/splade">official SPALDE code</a></td>
+<td align="left">97 GB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="code-to-build-and-search-indices"><strong>Code to build and search indices</strong></h3>
+<p>We open-source the code used to build the indices above. You can find the code <a href="https://github.com/shubham526/ikat-2024/tree/main">here</a></p>
 <h2 id="how-do-i-access-these-resources"><strong>How do I access these resources?</strong></h2>
 <p>Each team should use a URL of <code>https://ikattrecweb.grill.science/&lt;team_name&gt;</code> to access the files. The page will ask for a userID and password. Enter the login details which you obtained from the iKAT organizers. You should see a page which lists each type of data and has links to the individual files listed above, along with their checksum files.</p>
 <p><strong>NOTE:</strong> Please do not share IPs in the <code>10.x.x.x</code> range which is for private networks. We would need a suitable public IP so that we may configure the above download link to work for you.</p>
